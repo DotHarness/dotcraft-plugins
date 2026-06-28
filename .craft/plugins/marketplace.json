@@ -5,9 +5,9 @@
   },
   "plugins": [
     {
-      "id": "dotcraft-unity",
+      "name": "dotcraft-unity",
       "source": {
-        "kind": "registryPath",
+        "source": "local",
         "path": "./plugins/dotcraft-unity"
       },
       "policy": {
@@ -17,9 +17,9 @@
       "category": "Engineering"
     },
     {
-      "id": "oratorio",
+      "name": "oratorio",
       "source": {
-        "kind": "registryPath",
+        "source": "local",
         "path": "./plugins/oratorio"
       },
       "policy": {

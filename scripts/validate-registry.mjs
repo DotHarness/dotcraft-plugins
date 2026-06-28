@@ -24,7 +24,7 @@ function isInside(path, root) {
   return rel === '' || (!!rel && !rel.startsWith('..') && !isAbsolute(rel))
 }
 
-function resolveRegistryPath(pathValue) {
+function resolveMarketplacePath(pathValue) {
   if (typeof pathValue !== 'string' || !pathValue.startsWith('./')) {
     return { error: 'source.path must start with ./' }
   }
@@ -39,7 +39,7 @@ function validateManifestReferences(pluginId, pluginRoot, manifest) {
   for (const key of ['skills', 'apps', 'mcpServers', 'lspServers', 'desktopExtensions']) {
     const value = manifest[key]
     if (typeof value !== 'string') continue
-    const resolved = resolveRegistryPathFromPlugin(pluginRoot, value)
+    const resolved = resolvePluginRelativePath(pluginRoot, value)
     if (resolved.error) {
       fail(`${pluginId}: manifest ${key} ${resolved.error}`)
       continue
@@ -53,7 +53,7 @@ function validateManifestReferences(pluginId, pluginRoot, manifest) {
   for (const key of ['composerIcon', 'logo']) {
     const value = iface[key]
     if (typeof value !== 'string') continue
-    const resolved = resolveRegistryPathFromPlugin(pluginRoot, value)
+    const resolved = resolvePluginRelativePath(pluginRoot, value)
     if (resolved.error) {
       fail(`${pluginId}: interface.${key} ${resolved.error}`)
       continue
@@ -64,7 +64,7 @@ function validateManifestReferences(pluginId, pluginRoot, manifest) {
   }
 }
 
-function resolveRegistryPathFromPlugin(pluginRoot, pathValue) {
+function resolvePluginRelativePath(pluginRoot, pathValue) {
   if (typeof pathValue !== 'string' || !pathValue.startsWith('./')) {
     return { error: 'must start with ./' }
   }
@@ -81,49 +81,49 @@ if (!marketplace || !Array.isArray(marketplace.plugins)) {
 } else {
   const seen = new Set()
   for (const entry of marketplace.plugins) {
-    const id = typeof entry.id === 'string' ? entry.id.trim() : ''
-    if (!/^[A-Za-z0-9][A-Za-z0-9._:-]*$/.test(id)) {
-      fail('plugin entry id is invalid')
+    const name = typeof entry.name === 'string' ? entry.name.trim() : ''
+    if (!/^[A-Za-z0-9][A-Za-z0-9._:-]*$/.test(name)) {
+      fail('plugin entry name is invalid')
       continue
     }
-    if (seen.has(id.toLowerCase())) {
-      fail(`${id}: duplicate marketplace id`)
+    if (seen.has(name.toLowerCase())) {
+      fail(`${name}: duplicate marketplace name`)
       continue
     }
-    seen.add(id.toLowerCase())
+    seen.add(name.toLowerCase())
 
-    if (entry.source?.kind !== 'registryPath') {
-      fail(`${id}: source.kind must be registryPath`)
+    if (entry.source?.source !== 'local') {
+      fail(`${name}: source.source must be local`)
       continue
     }
     if (entry.policy?.installation !== 'AVAILABLE') {
-      fail(`${id}: policy.installation must be AVAILABLE`)
+      fail(`${name}: policy.installation must be AVAILABLE`)
     }
     if (entry.policy?.authentication !== 'ON_INSTALL') {
-      fail(`${id}: policy.authentication must be ON_INSTALL`)
+      fail(`${name}: policy.authentication must be ON_INSTALL`)
     }
 
-    const resolved = resolveRegistryPath(entry.source?.path)
+    const resolved = resolveMarketplacePath(entry.source?.path)
     if (resolved.error) {
-      fail(`${id}: ${resolved.error}`)
+      fail(`${name}: ${resolved.error}`)
       continue
     }
     if (!existsSync(resolved.full)) {
-      fail(`${id}: source.path does not exist`)
+      fail(`${name}: source.path does not exist`)
       continue
     }
 
     const manifestPath = join(resolved.full, '.craft-plugin', 'plugin.json')
     if (!existsSync(manifestPath)) {
-      fail(`${id}: missing .craft-plugin/plugin.json`)
+      fail(`${name}: missing .craft-plugin/plugin.json`)
       continue
     }
     const manifest = readJson(manifestPath)
     if (!manifest) continue
-    if (manifest.id !== id) {
-      fail(`${id}: manifest id '${manifest.id}' does not match marketplace id`)
+    if (manifest.id !== name) {
+      fail(`${name}: manifest id '${manifest.id}' does not match marketplace name`)
     }
-    validateManifestReferences(id, resolved.full, manifest)
+    validateManifestReferences(name, resolved.full, manifest)
   }
 }
 
