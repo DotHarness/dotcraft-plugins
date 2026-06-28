@@ -1,0 +1,32 @@
+{
+  "name": "dotcraft-official",
+  "interface": {
+    "displayName": "DotCraft Official Plugins"
+  },
+  "plugins": [
+    {
+      "id": "dotcraft-unity",
+      "source": {
+        "kind": "registryPath",
+        "path": "./plugins/dotcraft-unity"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Engineering"
+    },
+    {
+      "id": "oratorio",
+      "source": {
+        "kind": "registryPath",
+        "path": "./plugins/oratorio"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
