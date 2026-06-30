@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "grill-me",
+  "version": "0.1.0",
+  "displayName": "Grill Me",
+  "description": "A planning interview skill for stress-testing ideas and designs.",
+  "capabilities": ["skill"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Grill Me",
+    "shortDescription": "Stress-test plans with focused questions",
+    "longDescription": "Grill Me guides agents to interview the user one question at a time, walking through dependencies and decision branches until a plan or design is clear.",
+    "developerName": "DotHarness",
+    "category": "Productivity",
+    "capabilities": ["Skill", "Planning", "Review"],
+    "defaultPrompt": "Use Grill Me to stress-test this plan one question at a time.",
+    "brandColor": "#F97316"
+  }
+}

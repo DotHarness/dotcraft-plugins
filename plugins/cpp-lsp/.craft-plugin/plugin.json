@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "cpp-lsp",
+  "version": "0.1.0",
+  "displayName": "C/C++ LSP",
+  "description": "Provide clangd language intelligence for C and C++ projects in DotCraft.",
+  "capabilities": ["skill", "lsp"],
+  "skills": "./skills/",
+  "lspServers": "./.lsp.json",
+  "interface": {
+    "displayName": "C/C++ LSP",
+    "shortDescription": "Enable clangd for C and C++ projects",
+    "longDescription": "C/C++ LSP connects DotCraft's LSP tools to clangd so agents can inspect definitions, references, symbols, and call relationships in C and C++ workspaces.",
+    "developerName": "DotHarness",
+    "category": "Coding",
+    "capabilities": ["Skill", "LSP", "C", "C++"],
+    "defaultPrompt": "Set up C/C++ language intelligence for this workspace.",
+    "brandColor": "#00599C"
+  }
+}

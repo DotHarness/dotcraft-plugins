@@ -5,6 +5,42 @@
   },
   "plugins": [
     {
+      "name": "cpp-lsp",
+      "source": {
+        "source": "local",
+        "path": "./plugins/cpp-lsp"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Coding"
+    },
+    {
+      "name": "csharp-lsp",
+      "source": {
+        "source": "local",
+        "path": "./plugins/csharp-lsp"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Coding"
+    },
+    {
+      "name": "dotcraft-dev",
+      "source": {
+        "source": "local",
+        "path": "./plugins/dotcraft-dev"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Engineering"
+    },
+    {
       "name": "dotcraft-unity",
       "source": {
         "source": "local",
@@ -15,6 +51,30 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Engineering"
+    },
+    {
+      "name": "frontend-design",
+      "source": {
+        "source": "local",
+        "path": "./plugins/frontend-design"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Design"
+    },
+    {
+      "name": "grill-me",
+      "source": {
+        "source": "local",
+        "path": "./plugins/grill-me"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
     },
     {
       "name": "oratorio",

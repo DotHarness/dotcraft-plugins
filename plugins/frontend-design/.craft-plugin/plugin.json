@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "frontend-design",
+  "version": "0.1.0",
+  "displayName": "Frontend Design",
+  "description": "A frontend design skill for distinctive, production-grade interfaces.",
+  "capabilities": ["skill"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Frontend Design",
+    "shortDescription": "Create distinctive frontend interfaces",
+    "longDescription": "Frontend Design helps agents create polished, production-grade web interfaces with a strong visual point of view and less generic AI styling.",
+    "developerName": "DotHarness",
+    "category": "Design",
+    "capabilities": ["Skill", "Design", "Frontend"],
+    "defaultPrompt": "Use Frontend Design to create a distinctive, production-grade frontend interface.",
+    "brandColor": "#E11D48"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "csharp-lsp",
+  "version": "0.1.0",
+  "displayName": "C# LSP",
+  "description": "Provide csharp-ls language intelligence for C# projects in DotCraft.",
+  "capabilities": ["skill", "lsp"],
+  "skills": "./skills/",
+  "lspServers": "./.lsp.json",
+  "interface": {
+    "displayName": "C# LSP",
+    "shortDescription": "Enable csharp-ls for C# projects",
+    "longDescription": "C# LSP connects DotCraft's LSP tools to csharp-ls so agents can inspect definitions, references, symbols, and call relationships in C# workspaces.",
+    "developerName": "DotHarness",
+    "category": "Coding",
+    "capabilities": ["Skill", "LSP", "C#"],
+    "defaultPrompt": "Set up C# language intelligence for this workspace.",
+    "brandColor": "#512BD4"
+  }
+}
