@@ -15,6 +15,8 @@
     "category": "Coding",
     "capabilities": ["Skill", "LSP", "C#"],
     "defaultPrompt": "Set up C# language intelligence for this workspace.",
-    "brandColor": "#512BD4"
+    "brandColor": "#512BD4",
+    "composerIcon": "./assets/csharp-lsp.svg",
+    "logo": "./assets/csharp-lsp.svg"
   }
 }

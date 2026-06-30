@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 1024 1024" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Grill Me</title>
+  <desc id="desc">The DotCraft mascot in its approval pose, holding a question sign.</desc>
+  <defs>
+    <linearGradient id="blue" x1="279" y1="766" x2="736" y2="334" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2458F7"/>
+      <stop offset=".46" stop-color="#5F82F7"/>
+      <stop offset="1" stop-color="#8FA5FF"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="380" y1="696" x2="492" y2="557" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2257F5"/>
+      <stop offset=".55" stop-color="#577DF7"/>
+      <stop offset="1" stop-color="#8CA2FF"/>
+    </linearGradient>
+    <linearGradient id="yellow" x1="481" y1="174" x2="617" y2="713" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFCF11"/>
+      <stop offset="1" stop-color="#F6B500"/>
+    </linearGradient>
+    <filter id="soft" x="-12%" y="-12%" width="124%" height="124%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#0b3d62" flood-opacity=".18"/>
+    </filter>
+    <filter id="lift" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#163a88" flood-opacity=".1"/>
+    </filter>
+  </defs>
+  <g transform="translate(-18 78) scale(.92)">
+    <g filter="url(#soft)">
+      <rect x="201" y="365" width="622" height="513" rx="151" fill="#fff"/>
+      <rect x="165" y="472" width="136" height="256" rx="58" fill="#fff"/>
+      <g transform="translate(743 602) rotate(-128) scale(1 .8) translate(-791 -514)">
+        <rect x="723" y="472" width="136" height="256" rx="58" fill="#fff"/>
+      </g>
+      <rect x="438" y="270" width="148" height="182" rx="2" fill="#fff"/>
+      <circle cx="512" cy="229" r="116" fill="#fff"/>
+    </g>
+    <g filter="url(#lift)">
+      <rect x="243" y="408" width="538" height="426" rx="113" fill="url(#blue)"/>
+      <rect x="188" y="514" width="90" height="171" rx="19" fill="url(#blue)"/>
+      <g transform="translate(743 602) rotate(-128) scale(1 .8) translate(-791 -514)">
+        <rect x="746" y="514" width="90" height="171" rx="19" fill="#7A96FB"/>
+      </g>
+      <rect x="479" y="337" width="66" height="119" rx="6" fill="url(#blue)"/>
+    </g>
+    <rect x="295" y="464" width="434" height="315" rx="78" fill="#fff"/>
+    <circle cx="512" cy="229" r="73" fill="url(#yellow)"/>
+    <g>
+      <rect x="381" y="581" width="45" height="87" rx="16" fill="url(#mark)"/>
+      <rect x="598" y="581" width="45" height="87" rx="16" fill="url(#mark)"/>
+      <path d="M487 700h50" stroke="url(#yellow)" stroke-width="22" stroke-linecap="round"/>
+    </g>
+    <g filter="url(#soft)">
+      <rect x="866" y="356" width="24" height="150" rx="12" fill="#fff"/>
+      <rect x="758" y="190" width="240" height="170" rx="26" fill="#fff"/>
+      <path d="M843 247a37 37 0 0 1 70 12c0 24-36 36-36 36" stroke="#3161F7" stroke-width="26" fill="none" stroke-linecap="round"/>
+      <circle cx="878" cy="343" r="15" fill="#3161F7"/>
+    </g>
+  </g>
+</svg>

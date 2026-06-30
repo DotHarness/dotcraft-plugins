@@ -14,6 +14,8 @@
     "category": "Design",
     "capabilities": ["Skill", "Design", "Frontend"],
     "defaultPrompt": "Use Frontend Design to create a distinctive, production-grade frontend interface.",
-    "brandColor": "#E11D48"
+    "brandColor": "#E11D48",
+    "composerIcon": "./assets/frontend-design.svg",
+    "logo": "./assets/frontend-design.svg"
   }
 }
