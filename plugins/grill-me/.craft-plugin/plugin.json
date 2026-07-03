@@ -10,7 +10,7 @@
     "displayName": "Grill Me",
     "shortDescription": "Stress-test plans with focused questions",
     "longDescription": "Grill Me guides agents to interview the user one question at a time, walking through dependencies and decision branches until a plan or design is clear.",
-    "developerName": "DotHarness",
+    "developerName": "Matt Pocock",
     "category": "Productivity",
     "capabilities": ["Skill", "Planning", "Review"],
     "defaultPrompt": "Use Grill Me to stress-test this plan one question at a time.",
