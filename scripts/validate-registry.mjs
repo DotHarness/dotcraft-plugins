@@ -37,30 +37,46 @@ function resolveMarketplacePath(pathValue) {
 
 function validateManifestReferences(pluginId, pluginRoot, manifest) {
   for (const key of ['skills', 'apps', 'mcpServers', 'lspServers', 'desktopExtensions']) {
-    const value = manifest[key]
-    if (typeof value !== 'string') continue
-    const resolved = resolvePluginRelativePath(pluginRoot, value)
-    if (resolved.error) {
-      fail(`${pluginId}: manifest ${key} ${resolved.error}`)
-      continue
-    }
-    if (!existsSync(resolved.full)) {
-      fail(`${pluginId}: manifest ${key} points to missing path ${relative(repoRoot, resolved.full)}`)
-    }
+    validateManifestPathReference(pluginId, pluginRoot, `manifest ${key}`, manifest[key])
   }
+  validateManifestHooksReferences(pluginId, pluginRoot, manifest.hooks)
 
   const iface = manifest.interface ?? {}
   for (const key of ['composerIcon', 'logo']) {
-    const value = iface[key]
-    if (typeof value !== 'string') continue
-    const resolved = resolvePluginRelativePath(pluginRoot, value)
-    if (resolved.error) {
-      fail(`${pluginId}: interface.${key} ${resolved.error}`)
-      continue
-    }
-    if (!existsSync(resolved.full)) {
-      fail(`${pluginId}: interface.${key} points to missing path ${relative(repoRoot, resolved.full)}`)
-    }
+    validateManifestPathReference(pluginId, pluginRoot, `interface.${key}`, iface[key])
+  }
+}
+
+function validateManifestPathReference(pluginId, pluginRoot, label, value) {
+  if (typeof value !== 'string') return
+  const resolved = resolvePluginRelativePath(pluginRoot, value)
+  if (resolved.error) {
+    fail(`${pluginId}: ${label} ${resolved.error}`)
+    return
+  }
+  if (!existsSync(resolved.full)) {
+    fail(`${pluginId}: ${label} points to missing path ${relative(repoRoot, resolved.full)}`)
+  }
+}
+
+function validateManifestHooksReferences(pluginId, pluginRoot, hooks) {
+  if (hooks == null) return
+  if (typeof hooks === 'string') {
+    validateManifestPathReference(pluginId, pluginRoot, 'manifest hooks', hooks)
+    return
+  }
+  if (Array.isArray(hooks)) {
+    hooks.forEach((entry, index) => {
+      if (typeof entry === 'string') {
+        validateManifestPathReference(pluginId, pluginRoot, `manifest hooks[${index}]`, entry)
+      } else if (!entry || typeof entry !== 'object' || Array.isArray(entry)) {
+        fail(`${pluginId}: manifest hooks[${index}] must be a relative path string or inline hooks object`)
+      }
+    })
+    return
+  }
+  if (typeof hooks !== 'object') {
+    fail(`${pluginId}: manifest hooks must be a relative path string, array, or inline hooks object`)
   }
 }
 

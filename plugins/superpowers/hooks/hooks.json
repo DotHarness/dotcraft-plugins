@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${DOTCRAFT_PLUGIN_ROOT}/hooks/session-start.js\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
