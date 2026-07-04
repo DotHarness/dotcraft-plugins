@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "security-guidance",
+  "version": "2.0.6",
+  "displayName": "Security Guidance",
+  "description": "Pattern-based warnings on edits, LLM-powered diff review on Stop, and commit security review hooks.",
+  "capabilities": ["hooks"],
+  "hooks": "./hooks/hooks.json",
+  "author": {
+    "name": "David Dworken",
+    "email": "dworken@anthropic.com"
+  },
+  "homepage": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/security-guidance",
+  "repository": "https://github.com/anthropics/claude-plugins-official",
+  "license": "MIT",
+  "keywords": [
+    "security",
+    "hooks",
+    "review",
+    "diff",
+    "code-review"
+  ],
+  "interface": {
+    "displayName": "Security Guidance",
+    "shortDescription": "Security review hooks for edits, commits, pushes, and completed turns.",
+    "longDescription": "A DotCraft adaptation of Security Guidance. It adds pattern-based edit warnings, git-diff review on Stop, and commit/push security review hooks.",
+    "developerName": "David Dworken",
+    "category": "Security",
+    "capabilities": ["Hooks"],
+    "defaultPrompt": "Use Security Guidance hooks to review code edits and completed turns for security-sensitive changes.",
+    "websiteUrl": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/security-guidance",
+    "privacyPolicyUrl": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+    "termsOfServiceUrl": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
+    "brandColor": "#0EA5E9",
+    "composerIcon": "./assets/security-guidance.svg",
+    "logo": "./assets/security-guidance.svg"
+  }
+}
