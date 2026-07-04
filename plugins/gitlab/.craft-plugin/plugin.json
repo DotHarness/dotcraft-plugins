@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "gitlab",
+  "version": "0.1.0",
+  "displayName": "GitLab",
+  "description": "GitLab MCP tools for repositories, merge requests, issues, CI/CD pipelines, and wikis.",
+  "capabilities": ["mcp"],
+  "mcpServers": "./.mcp.json",
+  "author": {
+    "name": "GitLab"
+  },
+  "homepage": "https://gitlab.com/",
+  "keywords": [
+    "gitlab",
+    "mcp",
+    "repositories",
+    "merge-requests",
+    "issues",
+    "pipelines"
+  ],
+  "interface": {
+    "displayName": "GitLab",
+    "shortDescription": "GitLab MCP tools for repositories, merge requests, issues, and pipelines.",
+    "longDescription": "Connect DotCraft to GitLab's MCP server for repository management, merge requests, issues, CI/CD pipelines, wikis, and related GitLab DevOps workflows.",
+    "developerName": "GitLab",
+    "category": "Coding",
+    "capabilities": ["MCP"],
+    "defaultPrompt": "Use GitLab MCP tools to inspect repositories, merge requests, issues, and pipelines.",
+    "websiteUrl": "https://gitlab.com/",
+    "privacyPolicyUrl": "https://about.gitlab.com/privacy/",
+    "termsOfServiceUrl": "https://about.gitlab.com/terms/",
+    "brandColor": "#171321",
+    "composerIcon": "./assets/gitlab-small.svg",
+    "logo": "./assets/gitlab-small.svg"
+  }
+}

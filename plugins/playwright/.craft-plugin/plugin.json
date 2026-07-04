@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "playwright",
+  "version": "0.1.0",
+  "displayName": "Playwright",
+  "description": "Playwright MCP tools for browser automation, screenshots, forms, and end-to-end testing workflows.",
+  "capabilities": ["mcp"],
+  "mcpServers": "./.mcp.json",
+  "author": {
+    "name": "Microsoft"
+  },
+  "homepage": "https://github.com/microsoft/playwright-mcp",
+  "keywords": [
+    "playwright",
+    "mcp",
+    "browser",
+    "automation",
+    "testing",
+    "screenshots"
+  ],
+  "interface": {
+    "displayName": "Playwright",
+    "shortDescription": "Browser automation and end-to-end testing through Playwright MCP.",
+    "longDescription": "Connect DotCraft to Microsoft's Playwright MCP server for browser automation, page interaction, screenshots, form filling, and end-to-end testing workflows.",
+    "developerName": "Microsoft",
+    "category": "Coding",
+    "capabilities": ["MCP"],
+    "defaultPrompt": "Use Playwright MCP tools to inspect and interact with a web page.",
+    "websiteUrl": "https://github.com/microsoft/playwright-mcp",
+    "privacyPolicyUrl": "https://privacy.microsoft.com/privacystatement",
+    "termsOfServiceUrl": "https://www.microsoft.com/servicesagreement",
+    "brandColor": "#FFFFFF",
+    "composerIcon": "./assets/playwright-small.svg",
+    "logo": "./assets/playwright-small.svg"
+  }
+}
