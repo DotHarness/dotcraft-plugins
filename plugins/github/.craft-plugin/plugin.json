@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "github",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "displayName": "GitHub",
   "description": "GitHub's hosted MCP server for repository, issue, and pull request workflows.",
   "capabilities": ["mcp"],
@@ -9,10 +9,11 @@
   "author": {
     "name": "GitHub"
   },
-  "homepage": "https://github.com/",
+  "homepage": "https://github.com/github/github-mcp-server",
   "keywords": [
     "github",
     "mcp",
+    "mcp-apps",
     "repositories",
     "pull-requests",
     "issues"
@@ -23,9 +24,9 @@
     "longDescription": "Connect DotCraft to GitHub's hosted MCP server for repository management, pull requests, issues, code search, and related GitHub API workflows.",
     "developerName": "GitHub",
     "category": "Coding",
-    "capabilities": ["MCP"],
+    "capabilities": ["MCP", "MCP Apps"],
     "defaultPrompt": "Use GitHub MCP tools to inspect repositories, issues, and pull requests.",
-    "websiteUrl": "https://github.com/",
+    "websiteUrl": "https://github.com/github/github-mcp-server",
     "privacyPolicyUrl": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
     "termsOfServiceUrl": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
     "brandColor": "#FFFFFF",
