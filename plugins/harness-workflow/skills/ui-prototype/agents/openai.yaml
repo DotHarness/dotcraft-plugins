@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI Prototype"
+  short_description: "Prototype UI safely before production implementation"
+  default_prompt: "Use $ui-prototype to create or update a standalone HTML or project-native UI prototype before editing production code."

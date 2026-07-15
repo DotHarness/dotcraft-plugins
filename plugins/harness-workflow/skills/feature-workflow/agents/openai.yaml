@@ -1,0 +1,4 @@
+interface:
+  display_name: "Feature Workflow"
+  short_description: "Research, specify, and deliver substantial features"
+  default_prompt: "Use $feature-workflow to research, specify, and deliver a substantial feature through accepted milestones."

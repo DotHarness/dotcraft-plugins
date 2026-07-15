@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Harness Workflow</title>
+  <desc id="desc">The white DotHarness mark on a full-bleed black square with a blue three-node workflow path.</desc>
+  <rect width="48" height="48" rx="10" fill="#050505"/>
+  <path d="M14 16C14 11.58 17.58 8 22 8H39V16H30V26C30 31.52 25.52 36 20 36V16H14Z" fill="#F8FAFC"/>
+  <circle cx="11" cy="28" r="4" fill="#F8FAFC"/>
+  <path d="M27 34.5L34 39L41 32.5" stroke="#60A5FA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="27" cy="34.5" r="2.5" fill="#3B82F6" stroke="#BFDBFE" stroke-width="1"/>
+  <circle cx="34" cy="39" r="2.5" fill="#3B82F6" stroke="#BFDBFE" stroke-width="1"/>
+  <circle cx="41" cy="32.5" r="2.5" fill="#3B82F6" stroke="#BFDBFE" stroke-width="1"/>
+</svg>
