@@ -1,6 +1,6 @@
 # Project Profile — DotCraft
 
-This is the **only** project-specific file in the skill. `SKILL.md`, `page-templates.md`, and `style-and-mechanics.md` are portable writing guidance and reference this file for anything concrete (framework, file paths, languages, syntax, product terms). To reuse the skill on another project, replace **this file** and leave the rest intact.
+This file records DotCraft-specific conventions and examples. Verify them against the current repository before writing; locale support and product terminology can evolve.
 
 ## Doc system
 
@@ -15,12 +15,12 @@ This is the **only** project-specific file in the skill. `SKILL.md`, `page-templ
 
 Place a new page where its audience already lives. If unsure where it goes, ask before creating it.
 
-## Languages (bilingual)
+## Localized documentation
 
-- Two languages only: English at `docs/<path>.md`, Chinese mirror at `docs/zh/<path>.md`.
-- Keep structure, headings, links, code, admonitions, and images identical across both, and edit both in the same change.
-- VitePress handles `/zh/` routing; internal links omit the locale prefix and the `.md` extension.
-- Desktop UI strings are a separate, multi-locale system — out of scope here (see the `dotcraft-dev-guide` skill).
+- Before editing, inspect the current VitePress locale configuration and existing page mirrors to discover every supported documentation locale and its path.
+- Keep all localized versions structurally aligned: headings, links, code, admonitions, and images should match, and affected versions should be updated together.
+- Follow the current locale routing and internal-link conventions found in the site configuration and nearby pages.
+- UI localization is separate and is covered by `dotcraft-dev-guide`.
 
 ## Callouts / admonitions
 
@@ -54,14 +54,14 @@ Group parallel examples with VitePress code-group, canonical order **TypeScript 
 
 End every content page with a **Related docs** section: 2–5 relative links to sibling pages.
 
-## Protected terms (don't paraphrase or translate)
+## Protected terms (examples, not an exhaustive list)
 
-`workspace`, `.craft/`, `Agent Teams`, `Mission`, `Team Leader`, `AppServer`, `Hub`, `Dreams`, `Souls`, `App Binding`, `Unified Session Core`. Code, commands, identifiers, and product names stay in English in both language versions.
+Preserve established product terminology exactly. Examples (e.g.) include `workspace`, `.craft/`, `Agent Teams`, `Mission`, `Team Leader`, `AppServer`, `Hub`, `Dreams`, `Souls`, `App Binding`, and `Unified Session Core`. Before writing, inspect current UI copy, specs, code, and nearby docs for additional protected terms. Keep code, commands, identifiers, and product names unchanged unless the current project explicitly localizes them.
 
 ## Cross-platform shells
 
 The product is cross-platform: show `bash` first and a `powershell` alternative where commands differ (use `$null`, `$env:VAR` in PowerShell).
 
-## Adapting this skill to another project
+## Keeping this profile current
 
-Replace this file with your project's profile. Cover: doc generator, section/audience layout, languages + file paths, callout syntax, code-tab syntax + language order, asset location, footer convention, and protected product terms. The portable files already point here for all of it.
+Treat the entries above as guidance, not a closed inventory. When repository configuration or established usage disagrees with this file, follow the current repository and update the profile.

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "harness-workflow",
+  "version": "0.1.0",
+  "displayName": "Harness Workflow",
+  "description": "Shared product-development workflows from DotHarness.",
+  "capabilities": ["skill"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Harness Workflow",
+    "shortDescription": "Shared feature planning, UI prototyping, and SVG workflows.",
+    "longDescription": "Reusable DotHarness workflows for substantial feature planning, isolated UI prototyping, and repo-native SVG asset design across products and technology stacks.",
+    "developerName": "DotHarness",
+    "category": "Engineering",
+    "capabilities": ["Skill"],
+    "defaultPrompt": "Help me plan and deliver this product change, including any UI prototype or SVG assets it needs.",
+    "brandColor": "#050505",
+    "composerIcon": "./assets/harness-workflow.svg",
+    "logo": "./assets/harness-workflow.svg"
+  }
+}
