@@ -1,6 +1,6 @@
 ---
 name: svg-design
-description: Design, simplify, edit, preview, and validate SVG assets for product UI, desktop apps, documentation, skill icons, plugin icons, empty states, diagrams, or other repo-native vector graphics. Use when Codex needs to create a new SVG, refine an existing SVG, adapt a logo into a small icon, reduce visual clutter or overlap, preserve brand recognition at small sizes, or build a preview-and-screenshot workflow for SVG QA.
+description: Create and refine SVG assets with visual validation. Use for product graphics, icons, diagrams, and other repository-native vectors.
 ---
 
 # SVG Asset Design

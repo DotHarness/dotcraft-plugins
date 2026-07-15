@@ -1,6 +1,6 @@
 ---
 name: dotcraft-dev-guide
-description: Development workflow and project-specific norms for DotCraft. Use when changing protocol behavior or shipping user-facing features. Covers spec-first workflow, testing, localization, and documentation responsibilities.
+description: DotCraft development conventions. Use when changing protocols or shipping user-facing functionality.
 ---
 
 # DotCraft Development Guide

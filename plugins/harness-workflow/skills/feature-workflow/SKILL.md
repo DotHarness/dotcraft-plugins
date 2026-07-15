@@ -1,6 +1,6 @@
 ---
 name: feature-workflow
-description: Guides substantial feature development through repository research, a stable main specification, temporary milestone contracts, one-milestone-at-a-time implementation, user acceptance, and final spec consolidation. Use when planning or delivering a major feature, a multi-milestone capability, or any request that should be fully designed before implementation.
+description: Plan and deliver substantial features through a stable spec and reviewed milestones. Use for large or multi-stage work that should be designed before implementation.
 ---
 
 # Feature Workflow

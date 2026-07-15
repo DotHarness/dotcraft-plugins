@@ -1,6 +1,6 @@
 ---
 name: release-draft
-description: Draft DotCraft GitHub Release notes from repository evidence. Use when asked to write, revise, or prepare release copy for a DotCraft version, especially from a prior release style, What's New cards, GIF asset links, generated GitHub notes, changelog ranges, README/docs feature descriptions, or release tag comparisons.
+description: Draft DotCraft GitHub Release notes from repository evidence. Use when preparing or revising release copy for a version.
 ---
 
 # Release Draft

@@ -1,6 +1,6 @@
 ---
 name: ui-prototype
-description: Create standalone interactive UI prototypes before touching production code, using static HTML for loose visual exploration and the project's native UI framework for implementation-coupled previews. Use when exploring layouts, visual states, controls, responsive widths, interaction flows, or design references that should be reviewed outside the source repository before implementation.
+description: Prototype UI outside production code for design review. Use when exploring layouts, states, responsive behavior, or interaction flows before implementation.
 ---
 
 # UI Prototype
