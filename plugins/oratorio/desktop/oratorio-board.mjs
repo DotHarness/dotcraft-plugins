@@ -1,24 +1,25 @@
 /*
  * Oratorio board desktop extension (DotCraft Desktop mainView).
  *
- * Reads the board over the app's published loopback surface endpoint with
- * host.network.getJson, and performs a small set of writes with
- * host.network.postJson (gated by the extension's surfaceWriteScopes; see
- * specs/extensions/plugin-architecture.md). Heavier work — reject, draft
- * publishing, comments, full review, settings — stays in Oratorio via handoff.
+ * Reads and writes the board through DotCraft's authenticated App Surface
+ * proxy. The renderer only supplies app/surface identifiers and relative paths;
+ * DotCraft resolves the loopback endpoint and injects its bearer in main.
+ * Heavier work — reject, draft publishing, comments, full review, settings —
+ * stays in Oratorio via handoff.
  *
- * Surface endpoint contract (served by Oratorio over the loopback apiBase):
- *   GET  {apiBase}/items?includeArchived=false&limit=100      -> { items: ItemSummary[] }
- *   GET  {apiBase}/items/id/{itemId}                          -> ItemDetail (runs[], counts)
- *   POST {apiBase}/items                                      -> create local task
- *   POST {apiBase}/items/id/{itemId}/dispatch                -> dispatch (To do -> In progress)
- *   POST {apiBase}/items/id/{itemId}/approve                 -> approve (In review -> Done)
- *   POST {apiBase}/items/id/{itemId}/request-changes {feedback}
- *   POST {apiBase}/items/id/{itemId}/cancel-run {reason}
- *   POST {apiBase}/items/id/{itemId}/reorder {beforeItemId}  -> same-column reorder
+ * Board surface contract:
+ *   GET  /items?includeArchived=false&limit=100      -> { items: ItemSummary[] }
+ *   GET  /items/id/{itemId}                          -> ItemDetail (runs[], counts)
+ *   POST /items                                      -> create local task
+ *   POST /items/id/{itemId}/dispatch                -> dispatch (To do -> In progress)
+ *   POST /items/id/{itemId}/approve                 -> approve (In review -> Done)
+ *   POST /items/id/{itemId}/request-changes {feedback}
+ *   POST /items/id/{itemId}/cancel-run {reason}
+ *   POST /items/id/{itemId}/reorder {beforeItemId}  -> same-column reorder
  */
 
 const APP_ID = 'com.dotharness.oratorio'
+const BOARD_SURFACE_ID = 'board'
 
 const COLUMNS = [
   { id: 'todo', label: 'To do', desc: 'Ready to triage or dispatch.' },
@@ -113,7 +114,8 @@ export default function OratorioBoardView({ host }) {
   const raw = (html, props) => h('span', { ...(props || {}), dangerouslySetInnerHTML: { __html: html } })
 
   const [connection, setConnection] = useState(null)
-  const [apiBase, setApiBase] = useState('')
+  const [surfaceReady, setSurfaceReady] = useState(false)
+  const [surfaceUnavailable, setSurfaceUnavailable] = useState(false)
   const [items, setItems] = useState([])
   const [detail, setDetail] = useState(null)
   const [loading, setLoading] = useState(true)
@@ -137,7 +139,7 @@ export default function OratorioBoardView({ host }) {
   const [dragPlaceholder, setDragPlaceholder] = useState(null) // { col, index }
 
   const connected = connection?.state === 'connected'
-  const canRead = connected && !!apiBase
+  const canRead = connected && surfaceReady
 
   // ── Reads ───────────────────────────────────────────────────────────────
   const refresh = useCallback(async (opts) => {
@@ -145,20 +147,32 @@ export default function OratorioBoardView({ host }) {
     try {
       const status = await host.appBindings.getConnectionStatus(APP_ID)
       setConnection(status)
-      const base = normalizeApiBase(status?.publicMetadata?.surfaceEndpoints?.apiBase)
-      setApiBase(base)
-      if (status?.state !== 'connected') { setItems([]); return }
-      if (!base) {
+      if (status?.state !== 'connected') {
+        setSurfaceReady(false)
+        setSurfaceUnavailable(false)
         setItems([])
-        setError('Oratorio is connected, but it has not published a board endpoint yet. Reconnect Oratorio from DotCraft.')
         return
       }
-      const result = await host.network.getJson(base + '/items?includeArchived=false&limit=100', 12000)
+      const result = await host.appSurfaces.getJson(
+        APP_ID,
+        BOARD_SURFACE_ID,
+        '/items?includeArchived=false&limit=100',
+        12000
+      )
       const next = Array.isArray(result?.items) ? result.items : Array.isArray(result?.tasks) ? result.tasks : []
+      setSurfaceReady(true)
+      setSurfaceUnavailable(false)
       setItems(next.map(toCard))
       if (!opts?.keepError) setError(null)
     } catch (err) {
-      setError(messageOf(err))
+      if (isSurfaceUnavailable(err)) {
+        setSurfaceReady(false)
+        setSurfaceUnavailable(true)
+        setItems([])
+        setError(null)
+      } else {
+        setError(messageOf(err))
+      }
     } finally {
       setLoading(false)
     }
@@ -173,14 +187,14 @@ export default function OratorioBoardView({ host }) {
   // selected item detail (runs / counts / latest thread)
   const selected = useMemo(() => items.find((it) => it.id === selectedId) || null, [items, selectedId])
   useEffect(() => {
-    if (!apiBase || !drawerOpen || !selected) { setDetail(null); return }
+    if (!surfaceReady || !drawerOpen || !selected) { setDetail(null); return }
     let cancelled = false
     setDetail(null)
-    host.network.getJson(apiBase + '/items/id/' + encodeURIComponent(selected.itemId), 12000)
+    host.appSurfaces.getJson(APP_ID, BOARD_SURFACE_ID, '/items/id/' + encodeURIComponent(selected.itemId), 12000)
       .then((d) => { if (!cancelled) setDetail(d) })
       .catch(() => { if (!cancelled) setDetail(null) })
     return () => { cancelled = true }
-  }, [apiBase, host, drawerOpen, selected])
+  }, [surfaceReady, host, drawerOpen, selected])
 
   useEffect(() => {
     const onKey = (e) => {
@@ -253,7 +267,10 @@ export default function OratorioBoardView({ host }) {
   }, [host, refresh])
 
   // ── Writes ──────────────────────────────────────────────────────────────────
-  const post = useCallback((path, body) => host.network.postJson(apiBase + path, body || {}, 15000), [host, apiBase])
+  const post = useCallback(
+    (path, body) => host.appSurfaces.postJson(APP_ID, BOARD_SURFACE_ID, path, body || {}, 15000),
+    [host]
+  )
 
   const clearPending = () => { pendingRef.current = null }
 
@@ -428,11 +445,11 @@ export default function OratorioBoardView({ host }) {
         busy: actionBusy
       }))
     }
-    if (!apiBase) {
+    if (surfaceUnavailable) {
       return h('div', { className: 'oratorio-columns' }, surfaceState(h, ic, {
-        glyph: 'sliders', title: 'Finish connecting Oratorio',
-        body: 'Reconnect Oratorio so it can publish its local board endpoint to DotCraft.',
-        actions: [['Reconnect', connectOrReconnect, true]],
+        glyph: 'sliders', title: 'Open Oratorio to load the board',
+        body: 'The app connection is ready. Open Oratorio so it can publish its local board surface to DotCraft.',
+        actions: [['Open Oratorio', () => openOratorio('board'), true]],
         busy: actionBusy
       }))
     }
@@ -960,8 +977,13 @@ function celebrate(shell) {
   window.setTimeout(() => burst.remove(), 1100)
 }
 
-function normalizeApiBase(value) {
-  return typeof value === 'string' && value.trim() ? value.trim().replace(/\/+$/, '') : ''
+function isSurfaceUnavailable(err) {
+  const code = err && typeof err === 'object' ? (err.code || err.messageKey) : ''
+  const text = (err instanceof Error ? err.message : String(err == null ? '' : err)).toLowerCase()
+  return code === 'AppSurfaceUnavailable'
+    || code === 'errors.appSurfaceUnavailable'
+    || text.includes('appsurfaceunavailable')
+    || text.includes('app surface is unavailable')
 }
 function messageOf(err) {
   const raw = (err instanceof Error ? err.message : String(err == null ? '' : err)).trim()

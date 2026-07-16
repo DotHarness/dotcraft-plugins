@@ -23,8 +23,13 @@
         }
       ],
       "requiredAppIds": ["com.dotharness.oratorio"],
-      "connectOrigins": ["http://127.0.0.1:*", "http://localhost:*"],
-      "surfaceWriteScopes": ["board.manage"]
+      "requiredAppSurfaces": [
+        {
+          "appId": "com.dotharness.oratorio",
+          "surfaceId": "board",
+          "access": ["read", "write"]
+        }
+      ]
     }
   ]
 }
