@@ -424,7 +424,7 @@ export default function OratorioBoardView({ host }) {
       return h('div', { className: 'oratorio-columns' }, surfaceState(h, ic, {
         glyph: 'plug', title: 'Connect Oratorio to show the board here',
         body: 'DotCraft hosts the Oratorio board once the app connection is authorized. Consent still happens in Oratorio.',
-        actions: [['Connect Oratorio', connectOrReconnect, true], ['Open Oratorio', () => openOratorio('board'), false]],
+        actions: [['Connect Oratorio', connectOrReconnect, true]],
         busy: actionBusy
       }))
     }
@@ -432,14 +432,14 @@ export default function OratorioBoardView({ host }) {
       return h('div', { className: 'oratorio-columns' }, surfaceState(h, ic, {
         glyph: 'sliders', title: 'Finish connecting Oratorio',
         body: 'Reconnect Oratorio so it can publish its local board endpoint to DotCraft.',
-        actions: [['Reconnect', connectOrReconnect, true], ['Open Oratorio', () => openOratorio('board'), false]],
+        actions: [['Reconnect', connectOrReconnect, true]],
         busy: actionBusy
       }))
     }
     if (error && items.length === 0) {
       return h('div', { className: 'oratorio-columns' }, surfaceState(h, ic, {
         glyph: 'alert-circle', title: "Couldn't load the board",
-        body: error, actions: [['Try again', () => { setLoading(true); refresh() }, true], ['Open Oratorio', () => openOratorio('board'), false]]
+        body: error, actions: [['Try again', () => { setLoading(true); refresh() }, true]]
       }))
     }
     if (visible.length === 0) {
