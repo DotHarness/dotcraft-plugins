@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "transitions-dev",
+  "version": "0.1.0",
+  "displayName": "Transitions.dev",
+  "description": "Production-ready CSS transitions and motion-polish guidance for web interfaces.",
+  "capabilities": ["skill"],
+  "skills": "./skills/",
+  "author": {
+    "name": "Jakub Antalik",
+    "url": "https://github.com/Jakubantalik"
+  },
+  "homepage": "https://transitions.dev/",
+  "repository": "https://github.com/Jakubantalik/transitions.dev",
+  "keywords": [
+    "transitions",
+    "css",
+    "motion",
+    "animation",
+    "frontend",
+    "design"
+  ],
+  "interface": {
+    "displayName": "Transitions.dev",
+    "shortDescription": "Add and polish production-ready web transitions.",
+    "longDescription": "Transitions.dev provides portable CSS transition recipes for common interface patterns plus motion-token guidance for reviewing and polishing existing animations.",
+    "developerName": "Jakub Antalik",
+    "category": "Design",
+    "capabilities": ["Skill", "Design", "Frontend", "Motion"],
+    "defaultPrompt": "Use Transitions.dev to add the best-fit transition or polish the motion in this interface.",
+    "websiteUrl": "https://transitions.dev/",
+    "brandColor": "#FFFFFF",
+    "composerIcon": "./assets/transitions-dev.png",
+    "logo": "./assets/transitions-dev.png"
+  }
+}
