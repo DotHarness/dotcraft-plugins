@@ -1,13 +1,13 @@
 ---
 name: oratorio
-description: Use when the current thread is connected to Oratorio, or when the user asks to inspect or manage Oratorio board items, local tasks, review rounds, or agent-work coordination.
+description: Use when the current thread has an Oratorio App Binding, or when the user asks to inspect or manage Oratorio board items, local tasks, review rounds, or agent-work coordination through the available Oratorio board tools.
 ---
 
 # Oratorio
 
 ## Overview
 
-Oratorio is an operator-facing board for agent work. It tracks local tasks, GitHub issues, pull requests, review rounds, run history, decisions, comments, drafts, and source-write audit records. Use Oratorio tools when the user wants DotCraft to understand or manage that board.
+Oratorio is an operator-facing board for agent work. It tracks local tasks, GitHub issues, pull requests, review rounds, run history, decisions, comments, drafts, and source-write audit records. Its board tools are delivered through the Oratorio App Binding and MCP. Refer to the stable local tool names below; DotCraft assigns the canonical MCP namespace, so do not guess or hard-code it.
 
 ## Core Concepts
 
@@ -19,13 +19,13 @@ Oratorio is an operator-facing board for agent work. It tracks local tasks, GitH
 
 ## Tool Use
 
-Use `oratorio.ListBoardItems` to scan the board. Filter by state, source, repository, assignee, search text, or limit when the user asks for a subset.
+Use `ListBoardItems` to scan the board. Filter by state, source, repository, assignee, search text, or limit when the user asks for a subset.
 
-Use `oratorio.GetBoardItem` before making claims about one item or before queuing work against it. Prefer item ids or short ids from Oratorio results. Do not invent ids.
+Use `GetBoardItem` before making claims about one item or before queuing work against it. Prefer item ids or short ids from Oratorio results. Do not invent ids.
 
-Use `oratorio.CreateBoardTask` when the user clearly wants a durable Oratorio task. Create concise titles and useful descriptions. Include repository, branch, assignee, and labels only when known or explicitly requested.
+Use `CreateBoardTask` when the user clearly wants a durable Oratorio task. Create concise titles and useful descriptions. Include repository, branch, assignee, and labels only when known or explicitly requested.
 
-Use `oratorio.QueueReviewRound` when the user wants Oratorio to start a review-analysis round for an existing board item. Include a short note describing the requested focus.
+Use `QueueReviewRound` when the user wants Oratorio to start a review-analysis round for an existing board item. Include a short note describing the requested focus.
 
 ## Interaction Pattern
 
@@ -33,9 +33,7 @@ When the user asks what is on the board, summarize items by status and highlight
 
 When the user asks to create tasks from a discussion, extract concrete tasks, avoid duplicates when visible board context is available, and create only tasks that are specific enough to act on.
 
-When the target item is ambiguous, ask a short clarification before using write or queue tools.
-
-When using write or queue tools, rely on DotCraft approval for the final confirmation. Do not add a second verbal confirmation unless the request is ambiguous or risky.
+Use `CreateBoardTask` or `QueueReviewRound` only when the user explicitly asks to change Oratorio state. Do not rely on a possible approval prompt as authorization. Execute clear, low-risk requests directly; ask a short clarification only when the target, scope, or risk is ambiguous. If DotCraft presents an approval prompt, treat it as an additional gate.
 
 ## Output
 
