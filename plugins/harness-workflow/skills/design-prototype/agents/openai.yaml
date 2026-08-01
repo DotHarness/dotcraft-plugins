@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Prototype"
+  short_description: "Build product UI in a maintained design system"
+  default_prompt: "Use $design-prototype to design and validate this product UI in its maintained design system before production implementation."
