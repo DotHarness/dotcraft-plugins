@@ -8,12 +8,12 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Harness Workflow",
-    "shortDescription": "Shared feature planning, design prototyping, and SVG workflows.",
-    "longDescription": "Reusable DotHarness workflows for substantial feature planning, design-system-first product prototyping, and repo-native SVG asset design across products and technology stacks.",
+    "shortDescription": "Shared feature planning and design prototyping workflows.",
+    "longDescription": "Reusable DotHarness workflows for substantial feature planning and design-system-first product prototyping across products and technology stacks.",
     "developerName": "DotHarness",
     "category": "Engineering",
     "capabilities": ["Skill"],
-    "defaultPrompt": "Help me plan and deliver this product change, including any design-system prototype or SVG assets it needs.",
+    "defaultPrompt": "Help me plan and deliver this product change, including any design-system prototype it needs.",
     "brandColor": "#050505",
     "composerIcon": "./assets/harness-workflow.svg",
     "logo": "./assets/harness-workflow.svg"

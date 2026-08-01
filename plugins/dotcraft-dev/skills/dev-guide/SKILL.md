@@ -53,3 +53,7 @@ Before changing localized UI or documentation, inspect the repository's current 
 ## Documentation Guidelines
 
 Use `dotcraft-docs-guide` for audience routing, page structure, voice, localization, and site conventions. Before writing, inspect the current documentation structure and supported locales. Place new pages with the appropriate audience, ask only when placement is ambiguous, and document current behavior without historical rationale.
+
+## References
+
+- For SVG assets shipped with built-in skills, read `references/svg-style.md`.
