@@ -91,9 +91,9 @@ Applies when the project ships docs in more than one language (languages + paths
 
 ## 10. Anti-patterns — what must NOT appear (before/after)
 
-The recurring ways docs lose readers, with worked fixes. Each maps to a numbered rule in SKILL.md's "What must NOT appear." The examples are illustrative (not quotes from any one page); pattern-match against them when reviewing.
+The recurring ways docs lose readers, with worked fixes. The examples are illustrative (not quotes from any one page); pattern-match against them when reviewing.
 
-### 10.1 Internal mechanics on a user/feature page (rule 1)
+### 10.1 Internal mechanics on a user/feature page
 
 A feature page explains the idea; the moment a path, config key, tool name, or enum appears, it should be a link to reference — not body text.
 
@@ -104,43 +104,43 @@ A feature page explains the idea; the moment a path, config key, tool name, or e
 
 The test: would a non-developer need this token to understand the feature? If not, it's reference, and it belongs behind a link.
 
-### 10.2 Architecture before the reader needs it (rule 2)
+### 10.2 Architecture before the reader needs it
 
 > **Before** — a getting-started page that, right after the user's first action, opens a section on the internal "execution engine" and an architecture comparison table.
 >
 > **After:** End the tutorial at "you did the thing — here's what to try next." If the reader wants the why, link once: "Curious how it works under the hood? See [Architecture Overview](…)." The internals live there, for the audience that wants them.
 
-### 10.3 Register whiplash (rule 3)
+### 10.3 Register whiplash
 
 > **Before** — a feature page that swings within a few lines from "you give one ask and get the finished result" to "X is a managed runtime built on the internal session subsystem."
 >
 > **After:** Keep the whole feature page in the user register. The "managed runtime built on …" sentence moves to a developer page about how the feature is implemented.
 
-### 10.4 Jargon before definition (rule 4)
+### 10.4 Jargon before definition
 
 > **Before** — step 3 of an onboarding flow opens with an undefined internal term ("uses a provider registry"), then drops a 17-line config blob.
 >
 > **After:** Lead with the recommended path ("the setup wizard does this: pick a provider, paste a key"). Keep the raw config as an optional "edit directly" fallback *below* it, and define the term in one plain clause the first time it appears.
 
-### 10.5 History / migration / compatibility rationale (rule 5)
+### 10.5 History / migration / compatibility rationale
 
 > **Before:** "…historical records aren't migrated, so older data may still use the previous granularity." / "ids are kept for compatibility."
 >
 > **After:** Delete both. State only current behavior. A reader integrating today can't act on what old data looked like.
 
-### 10.6 Internal-only / spec-voice content (rule 6)
+### 10.6 Internal-only / spec-voice content
 
 > **Before:** "the error screen's primary action **should** open connection settings…" and maintainer-only env flags in a consumer-facing page.
 >
 > **After:** Describe observed behavior to the user: "If a saved connection is invalid, the error screen offers **Open connection settings** so you can fix it." Keep maintainer flags and "should"-requirements in specs, not in user or consumer docs.
 
-### 10.7 Duplicated content that drifts (rule 7)
+### 10.7 Duplicated content that drifts
 
 > **Before:** the same comparison table appears on two pages — with *different* column labels — so a reader can't tell if they're the same thing.
 >
 > **After:** Put the table on one page; everywhere else, link to it. Single source = no drift, one vocabulary.
 
-### 10.8 Unnatural / translated phrasing (rule 8)
+### 10.8 Unnatural / translated phrasing
 
 > **Before:** "The three files decide \"who this agent is and what rules it follows\"."
 > **After:** "Three files define the agent's identity and rules for this project."
@@ -150,7 +150,7 @@ The test: would a non-developer need this token to understand the feature? If no
 
 Read every paragraph aloud. Noun piles, hidden actors, and 30-word sentences are the tells.
 
-### 10.9 Load-bearing rules left implicit (rule 9)
+### 10.9 Load-bearing rules left implicit
 
 > **Before:** a connection rule (e.g. clients must append a path suffix to the server URL) is shown only by example, scattered across pages, and resurfaces as a troubleshooting item.
 >

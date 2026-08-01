@@ -52,7 +52,7 @@ Group parallel examples with VitePress code-group, canonical order **TypeScript 
 
 ## Page footer
 
-End every content page with a **Related docs** section: 2–5 relative links to sibling pages.
+End every content page with a **Related docs** section, translated to the locale's natural equivalent, containing 2–5 relative links to sibling pages.
 
 ## Protected terms (examples, not an exhaustive list)
 

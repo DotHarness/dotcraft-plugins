@@ -10,7 +10,7 @@ Copy the skeleton that matches the page's audience × purpose (see SKILL.md), th
 4. Concept / architecture explainer — *developer × explanation*
 5. Reference (config / CLI / protocol / SDK) — *developer × reference*
 
-*(There is intentionally no troubleshooting / FAQ archetype — see SKILL.md "What must NOT appear" #10.)*
+*(There is intentionally no troubleshooting / FAQ archetype — see `references/style-and-mechanics.md` §10.)*
 
 ---
 
@@ -19,11 +19,11 @@ Copy the skeleton that matches the page's audience × purpose (see SKILL.md), th
 Goal: one happy path to a first visible result, fast. No branching, no internals, no "you could also." Defer choices and auth to the moment they're needed.
 
 ```markdown
-# <Product / Feature> Getting Started
+# Get started with <product or feature>
 
 One sentence on who this is for and what they'll have working by the end.
 
-## Quick Start
+## Quick start
 
 ### 1. <First concrete action>
 
@@ -55,11 +55,11 @@ Rules: lead with the outcome; minimize explanation (link to a concept page for "
 Goal: explain a capability and let the reader use it, without turning into a reference. Friendly, concept-first, one diagram if it helps. Hand wire-level detail off to a developer reference page.
 
 ```markdown
-# <Feature Name>
+# <Feature name>
 
 Plain-language paragraph: what it does for the user and why it's worth using. Lead with value, not architecture.
 
-## Key Concepts
+## Key concepts
 
 | Concept | Meaning |
 |---|---|
@@ -130,7 +130,7 @@ Rules: a how-to solves a problem, not "operate feature X." Title it by the goal 
 Goal: build understanding. Name the audience up front, take the wider view, explain trade-offs. Neutral and precise.
 
 ```markdown
-# <Concept / Architecture Area> Overview
+# <Concept or architecture area> overview
 
 One paragraph stating scope and audience explicitly — e.g. "This page targets integrators and contributors; it explains the boundaries that matter for extension and troubleshooting."
 
@@ -166,7 +166,7 @@ Rules: explanation may discuss alternatives and reasoning — the one place "why
 Goal: complete, austere, authoritative. Structure mirrors the product. No motivation, no tutorial. Every option present and unambiguous.
 
 ```markdown
-# <Component> Reference
+# <Component> reference
 
 One line on what this documents and where it applies.
 
@@ -214,4 +214,4 @@ Rules: keep language tabs parallel — same steps, same order, every language. T
 
 ## A note on troubleshooting
 
-This skill intentionally ships **no** troubleshooting / FAQ archetype. A recurring small problem is a signal to strengthen the guidance on the relevant page; a genuine bug belongs in the issue tracker. See SKILL.md "What must NOT appear" #10.
+This skill intentionally ships **no** troubleshooting / FAQ archetype. A recurring small problem is a signal to strengthen the guidance on the relevant page; a genuine bug belongs in the issue tracker. See `references/style-and-mechanics.md` §10.
