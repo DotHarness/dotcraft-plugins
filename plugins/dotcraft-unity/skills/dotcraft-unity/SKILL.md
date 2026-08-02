@@ -7,7 +7,7 @@ description: Use when a DotCraft thread is connected to Unity Editor through dot
 
 ## Overview
 
-Use `unity_execute_csharp` for short Unity Editor method-body snippets that run inside the connected Editor process. Treat it as live editor automation: it can inspect and mutate scene, asset, and project state.
+Use `unity_execute_csharp` for short Unity Editor snippets containing optional leading `using` directives followed by method-body statements. Treat it as live editor automation: it can inspect and mutate scene, asset, and project state. Do not send namespace, class, or method declarations.
 
 This skill governs Unity tool calls, especially `unity_execute_csharp`. It does not replace normal repository file editing workflows.
 
@@ -61,6 +61,8 @@ When confirmation is needed, describe the exact Unity action and the state it ma
 ## Snippet Style
 
 Keep snippets short and deterministic. Prefer one clear task per call.
+
+Place any required ordinary, alias, `static`, or `global` using directives at the beginning of the snippet. `using var` declarations and `using (...)` statements are method-body statements and can be used normally.
 
 Use `DotCraft.Editor` API helpers for high-boilerplate inspection work. `unity_execute_csharp` snippets already import this namespace, so use `Dcu.Type`, `Dcu.Components`, `Dcu.Get`, and `Dcu.Call` directly when they replace substantial reflection or type-search code.
 
