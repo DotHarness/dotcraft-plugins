@@ -125,18 +125,6 @@
       "category": "Coding"
     },
     {
-      "name": "oratorio",
-      "source": {
-        "source": "local",
-        "path": "./plugins/oratorio"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Productivity"
-    },
-    {
       "name": "security-guidance",
       "source": {
         "source": "local",
