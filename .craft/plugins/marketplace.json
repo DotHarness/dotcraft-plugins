@@ -29,18 +29,6 @@
       "category": "Coding"
     },
     {
-      "name": "dotcraft-unity",
-      "source": {
-        "source": "local",
-        "path": "./plugins/dotcraft-unity"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Engineering"
-    },
-    {
       "name": "frontend-design",
       "source": {
         "source": "local",
