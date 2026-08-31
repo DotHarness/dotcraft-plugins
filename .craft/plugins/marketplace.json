@@ -125,10 +125,10 @@
       "category": "Productivity"
     },
     {
-      "name": "harness-workflow",
+      "name": "dotharness",
       "source": {
         "source": "local",
-        "path": "./plugins/harness-workflow"
+        "path": "./plugins/dotharness"
       },
       "policy": {
         "installation": "AVAILABLE",

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Please Cleanup"
+  short_description: "Clean up scoped uncommitted changes safely"
+  default_prompt: "Use $please-cleanup to clean up the requested uncommitted changes."
+
+policy:
+  allow_implicit_invocation: false

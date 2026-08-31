@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "dotharness",
+  "version": "0.1.0",
+  "displayName": "DotHarness",
+  "description": "Official DotHarness workflows for Harness Engineering.",
+  "capabilities": ["skill"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "DotHarness",
+    "shortDescription": "Official workflows for Harness Engineering.",
+    "longDescription": "Official DotHarness workflows for consistent, high-quality Harness Engineering across products and technology stacks.",
+    "developerName": "DotHarness",
+    "category": "Engineering",
+    "capabilities": ["Skill"],
+    "defaultPrompt": "Help me choose and apply the right DotHarness workflow for this Harness Engineering task.",
+    "brandColor": "#050505",
+    "composerIcon": "./assets/dotharness.svg",
+    "logo": "./assets/dotharness.svg"
+  }
+}
