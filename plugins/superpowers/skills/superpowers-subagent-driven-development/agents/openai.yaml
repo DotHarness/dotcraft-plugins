@@ -1,3 +1,5 @@
 interface:
   display_name: "Subagent-Driven Development"
   short_description: "Execute implementation plans with staged subagent reviews"
+  icon_small: "../../assets/superpowers-small.svg"
+  icon_large: "../../assets/superpowers-small.svg"

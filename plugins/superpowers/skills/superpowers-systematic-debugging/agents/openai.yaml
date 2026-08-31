@@ -1,3 +1,5 @@
 interface:
   display_name: "Systematic Debugging"
   short_description: "Find root causes before attempting fixes"
+  icon_small: "../../assets/superpowers-small.svg"
+  icon_large: "../../assets/superpowers-small.svg"

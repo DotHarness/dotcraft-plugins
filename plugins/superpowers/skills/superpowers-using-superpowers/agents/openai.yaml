@@ -1,3 +1,5 @@
 interface:
   display_name: "Using Superpowers"
   short_description: "Establish how and when to use Superpowers skills"
+  icon_small: "../../assets/superpowers-small.svg"
+  icon_large: "../../assets/superpowers-small.svg"

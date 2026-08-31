@@ -1,3 +1,5 @@
 interface:
   display_name: "Brainstorming"
   short_description: "Explore intent, requirements, and design before implementation"
+  icon_small: "../../assets/superpowers-small.svg"
+  icon_large: "../../assets/superpowers-small.svg"
