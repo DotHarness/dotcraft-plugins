@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create Spec"
+  short_description: "Create durable DotHarness-style specifications"
+  default_prompt: "Use $create-spec to create a durable specification for this request."
