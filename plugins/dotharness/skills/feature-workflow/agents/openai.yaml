@@ -1,6 +1,8 @@
 interface:
   display_name: "Feature Workflow"
   short_description: "Research, specify, and deliver substantial features"
+  icon_small: "../../assets/dotharness.svg"
+  icon_large: "../../assets/dotharness.svg"
   default_prompt: "Use $feature-workflow to research, specify, and deliver a substantial feature through accepted milestones."
 
 policy:
