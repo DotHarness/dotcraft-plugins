@@ -30,6 +30,7 @@
       <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#020617" flood-opacity=".22"/>
     </filter>
   </defs>
+  <rect width="1024" height="1024" rx="224" fill="#0EA5E9"/>
 
   <g transform="translate(512 516) scale(.82) translate(-512 -512)">
     <g transform="translate(512 528) scale(1.3) translate(-512 -512)">

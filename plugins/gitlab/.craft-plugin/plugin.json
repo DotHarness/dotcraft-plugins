@@ -29,7 +29,6 @@
     "websiteUrl": "https://gitlab.com/",
     "privacyPolicyUrl": "https://about.gitlab.com/privacy/",
     "termsOfServiceUrl": "https://about.gitlab.com/terms/",
-    "brandColor": "#171321",
     "composerIcon": "./assets/gitlab-small.svg",
     "logo": "./assets/gitlab-small.svg"
   }

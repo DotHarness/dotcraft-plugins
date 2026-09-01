@@ -29,7 +29,6 @@
     "capabilities": ["Skill", "Design", "Frontend", "Motion"],
     "defaultPrompt": "Use Transitions.dev to add the best-fit transition or polish the motion in this interface.",
     "websiteUrl": "https://transitions.dev/",
-    "brandColor": "#FFFFFF",
     "composerIcon": "./assets/transitions-dev.png",
     "logo": "./assets/transitions-dev.png"
   }

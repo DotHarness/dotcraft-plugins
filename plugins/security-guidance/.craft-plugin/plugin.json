@@ -31,7 +31,6 @@
     "websiteUrl": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/security-guidance",
     "privacyPolicyUrl": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
     "termsOfServiceUrl": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
-    "brandColor": "#0EA5E9",
     "composerIcon": "./assets/security-guidance.svg",
     "logo": "./assets/security-guidance.svg"
   }

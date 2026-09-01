@@ -15,7 +15,6 @@
     "category": "Coding",
     "capabilities": ["Skill", "LSP", "C", "C++"],
     "defaultPrompt": "Set up C/C++ language intelligence for this workspace.",
-    "brandColor": "#00599C",
     "composerIcon": "./assets/cpp-lsp.svg",
     "logo": "./assets/cpp-lsp.svg"
   }

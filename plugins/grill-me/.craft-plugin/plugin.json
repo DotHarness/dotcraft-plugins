@@ -14,7 +14,6 @@
     "category": "Productivity",
     "capabilities": ["Skill", "Planning", "Review"],
     "defaultPrompt": "Use Grill Me to stress-test this plan one question at a time.",
-    "brandColor": "#F97316",
     "composerIcon": "./assets/grill-me.svg",
     "logo": "./assets/grill-me.svg"
   }

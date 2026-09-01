@@ -29,7 +29,6 @@
     "websiteUrl": "https://github.com/github/github-mcp-server",
     "privacyPolicyUrl": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
     "termsOfServiceUrl": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
-    "brandColor": "#FFFFFF",
     "composerIcon": "./assets/github-small.svg",
     "logo": "./assets/github-small.svg"
   }

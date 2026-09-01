@@ -29,7 +29,6 @@
     "websiteUrl": "https://github.com/microsoft/playwright-mcp",
     "privacyPolicyUrl": "https://privacy.microsoft.com/privacystatement",
     "termsOfServiceUrl": "https://www.microsoft.com/servicesagreement",
-    "brandColor": "#FFFFFF",
     "composerIcon": "./assets/playwright-small.svg",
     "logo": "./assets/playwright-small.svg"
   }

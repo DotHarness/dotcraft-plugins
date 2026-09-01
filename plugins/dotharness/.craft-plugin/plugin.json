@@ -14,7 +14,6 @@
     "category": "Engineering",
     "capabilities": ["Skill"],
     "defaultPrompt": "Help me choose and apply the right DotHarness workflow for this Harness Engineering task.",
-    "brandColor": "#050505",
     "composerIcon": "./assets/dotharness.svg",
     "logo": "./assets/dotharness.svg"
   }

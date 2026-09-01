@@ -36,7 +36,6 @@
     "websiteUrl": "https://github.com/obra/superpowers",
     "privacyPolicyUrl": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
     "termsOfServiceUrl": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
-    "brandColor": "#F59E0B",
     "composerIcon": "./assets/superpowers-small.svg",
     "logo": "./assets/superpowers-small.svg"
   }
