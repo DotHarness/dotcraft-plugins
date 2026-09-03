@@ -4,3 +4,6 @@ interface:
   icon_small: "../../assets/dotharness.svg"
   icon_large: "../../assets/dotharness.svg"
   default_prompt: "Use $create-spec to create a durable specification for this request."
+
+policy:
+  allow_implicit_invocation: false

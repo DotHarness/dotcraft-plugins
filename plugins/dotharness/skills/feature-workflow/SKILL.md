@@ -14,7 +14,7 @@ Use a research-first, spec-first process for large features. Establish the compl
 3. Treat the main spec as the durable contract. Update it before changing behavior, architecture, or workflow in code.
 4. Define all milestone contracts up front, then implement one milestone at a time unless the user explicitly requests bundled delivery.
 5. After each milestone, validate it and stop for user acceptance unless the user explicitly asks to continue without stopping.
-6. Keep milestone files and terminology temporary. Do not expose them in the final repository or commit history.
+6. Keep milestone files and terminology temporary.
 
 Do enough research and confirmation to keep the main spec stable. Do not rewrite it merely to make divergent implementation appear compliant; when the agreed contract still stands, correct the implementation instead.
 
@@ -25,11 +25,10 @@ Inspect repository guidance and existing specifications before creating artifact
 - If the user designates an existing Markdown file, use it as the main spec.
 - Otherwise, follow the project's established spec location, naming, and structure. Ask before creating the main spec only when the correct target cannot be determined.
 - Store temporary milestone specs under the repository-root `references/` directory by default. A user-specified location overrides this default.
-- Never stage or commit temporary milestone specs.
 
 ## Phase 1: Research and scope
 
-Always inspect the current project. Read the relevant code, existing specs, tests, documentation, and repository history needed to understand:
+Read the relevant code, existing specs, tests, documentation, and repository history needed to understand:
 
 - the feature goal, users, success criteria, and non-goals
 - current architecture, module boundaries, contracts, and lifecycle
