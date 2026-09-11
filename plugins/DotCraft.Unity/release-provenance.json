@@ -1,0 +1,104 @@
+{
+  "files": [
+    {
+      "sha256": "4731f6bc032170d0093081e1407eb2b08f7d8d75d0cb2bd9b1fb67099fbebb83",
+      "path": "com.dotcraft.unity-0.4.0.zip"
+    },
+    {
+      "sha256": "26581b988a8a424e9068916813c9deb2c610e836fa5535fa7812d1702f082952",
+      "path": "dotcraft-unity.exe"
+    },
+    {
+      "sha256": "3b09f622300ae031a92f0b8e5f10612059f65f7c99015e3fd0fc898898ad5d60",
+      "path": "gateway-artifact.json"
+    },
+    {
+      "sha256": "825ab70b5fb0ed81ab2d85a20c2cd60ac90262345cf580bfe2f4f3e6f7451eac",
+      "path": "install.ps1"
+    },
+    {
+      "sha256": "177df7b4a6883c430e5b258fc7d8b633c732627d36c04513725cf871462af824",
+      "path": "THIRD-PARTY-NOTICES.txt"
+    },
+    {
+      "sha256": "05e86063ce7068caa4d04c243b56bf4b87201ef852dffe011e29d7ed1404b0f1",
+      "path": "Unity-0.4.0.zip"
+    }
+  ],
+  "harnessPackage": {
+    "id": "DotCraft.Harness",
+    "version": "0.6.5",
+    "contentHash": "/j+lLe1M8BCanDNjXjXy0dEvT1ZfK5SG8xdb1Evee4RiDY4XdLvzYPyASO2rZ2assdWd57vwHW5PYxsSooUrqQ=="
+  },
+  "platform": "win-x64",
+  "commit": "f137c2bfb3d535a45f360bbb0a34d1e2a1164e04",
+  "pluginFiles": [
+    {
+      "sha256": "b9fa8d22ae800eecfff06585261ea13ea37d8671cc18bb84acab32d03da5e376",
+      "path": "README.md"
+    },
+    {
+      "sha256": "46da775e5a7c1e57e362bda1731fd57cc440476ddd48a4444aa90133dd15e770",
+      "path": ".craft-plugin/plugin.json"
+    },
+    {
+      "sha256": "a916d50b84ecde692eb0927cdbf39a74568a648c633d0c6ef4dd3fe1cfec6b7a",
+      "path": "assets/unity.svg"
+    },
+    {
+      "sha256": "ad8b36ef9132ec25e729190b8709802ce6911da66d20ee0f946a88b5c3182861",
+      "path": "lib/DotCraft.Unity.Attach.dll"
+    },
+    {
+      "sha256": "66ccc662d3f314205d2639055d19a042554dca22952e3b9d62d88abec626a4e3",
+      "path": "lib/DotCraft.Unity.deps.json"
+    },
+    {
+      "sha256": "7e1bbed43eaafd567ddd350e6e4848f6b8a7106365ff0fb7c70d97ffd256b05d",
+      "path": "lib/DotCraft.Unity.dll"
+    },
+    {
+      "sha256": "54142770a00e594942ee8923726ea49126303d0c523932886c2417eb66dc07f8",
+      "path": "lib/Microsoft.CodeAnalysis.CSharp.dll"
+    },
+    {
+      "sha256": "ad857f1ce7f8e26c2722ade705fac3f90502a47590c14075df1327210f10b1ef",
+      "path": "lib/Microsoft.CodeAnalysis.dll"
+    },
+    {
+      "sha256": "9139e51b28c13c616fba199df2fa1df0ae18fae5f1bd2de4960bf5cc77e5d58b",
+      "path": "skills/unity/SKILL.md"
+    },
+    {
+      "sha256": "f68129583125a9a0f20c63351ccae381b2bdec1a25f40e02a82f3c6b26978474",
+      "path": "skills/unity/agents/openai.yaml"
+    },
+    {
+      "sha256": "8dd757c59b82729f2d2a866196f34f497da979f3990a3d5905f8718f16651374",
+      "path": "skills/unity/references/api.md"
+    },
+    {
+      "sha256": "0ee4ac8c3659f16c6e7504e9df84f462e8dc3812870781fcb3192dda797734aa",
+      "path": "skills/unity/references/compilation-and-reload.md"
+    },
+    {
+      "sha256": "caaf5dc1de1fa96cfbe94387294eb88f516232ab915d628d804df237047afcee",
+      "path": "skills/unity/references/console-reading.md"
+    },
+    {
+      "sha256": "bed41829edbe1c8ebf831f434636faca66b24a2556e9600e96d5de1e3ed41d5d",
+      "path": "skills/unity/references/editor-screenshot.md"
+    },
+    {
+      "sha256": "db9f808b1a39916c354afb2adedf143c378fa2a6268d139ca829600edff6c289",
+      "path": "skills/unity/references/snippet-craft.md"
+    },
+    {
+      "sha256": "8e90b59ccf7ee7c786b54ed74d9a349a0637fb63bdf118ff2290778e410009ab",
+      "path": "skills/unity/scripts/console-read.cs"
+    }
+  ],
+  "sourceDirty": false,
+  "schemaVersion": 1,
+  "version": "0.4.0"
+}
