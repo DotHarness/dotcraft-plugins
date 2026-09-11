@@ -1,15 +1,21 @@
 {
+  "platform": "win-x64",
+  "harnessPackage": {
+    "id": "DotCraft.Harness",
+    "version": "0.6.5",
+    "contentHash": "/j+lLe1M8BCanDNjXjXy0dEvT1ZfK5SG8xdb1Evee4RiDY4XdLvzYPyASO2rZ2assdWd57vwHW5PYxsSooUrqQ=="
+  },
   "files": [
     {
-      "sha256": "4731f6bc032170d0093081e1407eb2b08f7d8d75d0cb2bd9b1fb67099fbebb83",
-      "path": "com.dotcraft.unity-0.4.0.zip"
+      "sha256": "39c30b329ae57649ac03af934013897a6499c62231ea0865de81e2c6f1cfb40d",
+      "path": "com.dotcraft.unity-0.4.1.zip"
     },
     {
-      "sha256": "26581b988a8a424e9068916813c9deb2c610e836fa5535fa7812d1702f082952",
+      "sha256": "ce1611814ffbff91419bae104769fd6d70fc3908177166ba25cd66f95c56babd",
       "path": "dotcraft-unity.exe"
     },
     {
-      "sha256": "3b09f622300ae031a92f0b8e5f10612059f65f7c99015e3fd0fc898898ad5d60",
+      "sha256": "4de9a4f5000740b1598f59030650e40ca26db83933bed7df42ebfd7160a7f725",
       "path": "gateway-artifact.json"
     },
     {
@@ -21,24 +27,14 @@
       "path": "THIRD-PARTY-NOTICES.txt"
     },
     {
-      "sha256": "05e86063ce7068caa4d04c243b56bf4b87201ef852dffe011e29d7ed1404b0f1",
-      "path": "Unity-0.4.0.zip"
+      "sha256": "d8b6442a21238cd24104bdbd46984ef9271707bb52990bbb82f59e0e1cff4288",
+      "path": "Unity-0.4.1.zip"
     }
   ],
-  "harnessPackage": {
-    "id": "DotCraft.Harness",
-    "version": "0.6.5",
-    "contentHash": "/j+lLe1M8BCanDNjXjXy0dEvT1ZfK5SG8xdb1Evee4RiDY4XdLvzYPyASO2rZ2assdWd57vwHW5PYxsSooUrqQ=="
-  },
-  "platform": "win-x64",
-  "commit": "f137c2bfb3d535a45f360bbb0a34d1e2a1164e04",
+  "sourceDirty": false,
   "pluginFiles": [
     {
-      "sha256": "b9fa8d22ae800eecfff06585261ea13ea37d8671cc18bb84acab32d03da5e376",
-      "path": "README.md"
-    },
-    {
-      "sha256": "46da775e5a7c1e57e362bda1731fd57cc440476ddd48a4444aa90133dd15e770",
+      "sha256": "672d1b7382860972adaefd7b2e3bbb92f4e604ec95dc6c761fab96d7b30c8fa7",
       "path": ".craft-plugin/plugin.json"
     },
     {
@@ -46,15 +42,15 @@
       "path": "assets/unity.svg"
     },
     {
-      "sha256": "ad8b36ef9132ec25e729190b8709802ce6911da66d20ee0f946a88b5c3182861",
+      "sha256": "1c8e66e6f97fbc16c9928af374dcc162a7836b85fc0ed614e9e89f34ec7e1581",
       "path": "lib/DotCraft.Unity.Attach.dll"
     },
     {
-      "sha256": "66ccc662d3f314205d2639055d19a042554dca22952e3b9d62d88abec626a4e3",
+      "sha256": "351063f0faf71ddca9e462394967b2491e7ab0b7fdbb056e069741f4badcaf2a",
       "path": "lib/DotCraft.Unity.deps.json"
     },
     {
-      "sha256": "7e1bbed43eaafd567ddd350e6e4848f6b8a7106365ff0fb7c70d97ffd256b05d",
+      "sha256": "99b5862430a9cd53b66b8288ed90c6965d378633809c8bb5a47cde7b5c03e672",
       "path": "lib/DotCraft.Unity.dll"
     },
     {
@@ -98,7 +94,7 @@
       "path": "skills/unity/scripts/console-read.cs"
     }
   ],
-  "sourceDirty": false,
+  "version": "0.4.1",
   "schemaVersion": 1,
-  "version": "0.4.0"
+  "commit": "382e83e7ee7f7bd9fdabded56c8dc6494e98a4c0"
 }
