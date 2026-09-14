@@ -6,17 +6,18 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v10.0": {
-      "DotCraft.Unity/0.4.1": {
+      "DotCraft.Unity/0.4.2": {
         "dependencies": {
-          "DotCraft.Harness": "0.6.5",
-          "DotCraft.Unity.Attach": "0.4.1"
+          "DotCraft.Harness": "0.6.6",
+          "DotCraft.Unity.Attach": "0.4.2"
         },
         "runtime": {
           "DotCraft.Unity.dll": {}
         }
       },
-      "DotCraft.Harness/0.6.5": {
+      "DotCraft.Harness/0.6.6": {
         "dependencies": {
+          "Microsoft.CodeAnalysis.CSharp": "5.3.0",
           "SQLitePCLRaw.bundle_e_sqlite3": "3.0.3"
         }
       },
@@ -285,31 +286,31 @@
           "SourceGear.sqlite3": "3.50.4.5"
         }
       },
-      "DotCraft.Unity.Attach/0.4.1": {
+      "DotCraft.Unity.Attach/0.4.2": {
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp": "5.3.0"
         },
         "runtime": {
           "DotCraft.Unity.Attach.dll": {
-            "assemblyVersion": "0.4.1.0",
-            "fileVersion": "0.4.1.0"
+            "assemblyVersion": "0.4.2.0",
+            "fileVersion": "0.4.2.0"
           }
         }
       }
     }
   },
   "libraries": {
-    "DotCraft.Unity/0.4.1": {
+    "DotCraft.Unity/0.4.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "DotCraft.Harness/0.6.5": {
+    "DotCraft.Harness/0.6.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-/j+lLe1M8BCanDNjXjXy0dEvT1ZfK5SG8xdb1Evee4RiDY4XdLvzYPyASO2rZ2assdWd57vwHW5PYxsSooUrqQ==",
-      "path": "dotcraft.harness/0.6.5",
-      "hashPath": "dotcraft.harness.0.6.5.nupkg.sha512"
+      "sha512": "sha512-nJGdx62xNs85mSvitPr/eHOQ4iOe2+AUhDLSTrjbf4zEQw8l8mzTnvXk7vtj7fX9PZR6rf40CkFGbPsZ97F4vg==",
+      "path": "dotcraft.harness/0.6.6",
+      "hashPath": "dotcraft.harness.0.6.6.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.Common/5.3.0": {
       "type": "package",
@@ -339,7 +340,7 @@
       "path": "sqlitepclraw.bundle_e_sqlite3/3.0.3",
       "hashPath": "sqlitepclraw.bundle_e_sqlite3.3.0.3.nupkg.sha512"
     },
-    "DotCraft.Unity.Attach/0.4.1": {
+    "DotCraft.Unity.Attach/0.4.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
