@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "blender",
+  "version": "0.1.0",
+  "displayName": "Blender",
+  "description": "Inspect and drive a running Blender session.",
+  "capabilities": ["dotnet", "skill"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Blender",
+    "shortDescription": "Drive a running Blender session",
+    "longDescription": "Blender connects DotCraft to a live Blender session: read the scene, run Python on Blender's main thread, capture the viewport, and start renders without blocking the app.",
+    "developerName": "DotHarness",
+    "category": "Engineering",
+    "capabilities": ["Skill", "Blender", "Read", "Write"],
+    "defaultPrompt": "Look at my Blender scene and tell me what is in it.",
+    "composerIcon": "./assets/blender-small.svg",
+    "logo": "./assets/blender.svg"
+  },
+  "dotnet": {
+    "displayName": "Blender integration",
+    "description": "Native tools for a connected Blender session.",
+    "minHostVersion": "0.6.9",
+    "entryAssembly": "./lib/DotCraft.Blender.dll",
+    "entryType": "DotCraft.Blender.Plugin"
+  }
+}

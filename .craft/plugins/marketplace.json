@@ -147,6 +147,18 @@
         "installation": "AVAILABLE"
       },
       "category": "Engineering"
+    },
+    {
+      "name": "blender",
+      "source": {
+        "source": "local",
+        "path": "./plugins/blender"
+      },
+      "policy": {
+        "authentication": "ON_INSTALL",
+        "installation": "AVAILABLE"
+      },
+      "category": "Engineering"
     }
   ]
 }
