@@ -75,12 +75,17 @@ Rules that matter:
 
 ## Look at the result
 
-The scene text tells you what exists, not what it looks like. Capture the viewport after a
-change that was supposed to be visible:
+The scene text tells you what exists, not what it looks like. `blender.view` returns an image, so
+use it after a change that was supposed to be visible:
 
 ```
 blender.view { maxSize: 800 }
+blender.view { filepath: "...\render.png" }
 ```
+
+With no `filepath` it captures the viewport; with one it reads that image back, which is how you
+look at what a render produced. Do not read the file another way, convert it, or embed it in a
+page; the tool already hands you the picture.
 
 `blender.scene` returns the graph, and `blender.scene { name: "Ball" }` returns one object with
 its mesh statistics, modifiers, materials and parents.
@@ -89,7 +94,10 @@ its mesh statistics, modifiers, materials and parents.
 
 `blender.render` returns a job id immediately and the render proceeds through Blender's own modal
 path, so the session stays responsive. Poll with `blender.job { jobId }` until the state leaves
-`running`, then read the image back with the reported `filepath`.
+`running` — poll it, do not sleep — then look at the result with `blender.view { filepath }`.
+
+The file lands on exactly the `filepath` you asked for, and its extension chooses the format:
+`.png` and `.jpg` both work.
 
 Do not render inside `execute`. A synchronous `bpy.ops.render.render()` holds the main thread for
 the whole render and blocks every other call until it finishes.
