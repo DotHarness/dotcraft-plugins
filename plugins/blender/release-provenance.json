@@ -1,0 +1,75 @@
+{
+  "platform": "any",
+  "schemaVersion": 1,
+  "version": "0.1.0",
+  "commit": "2fd4d0f74fb78a1834823f3f6b586177ad8452c9",
+  "pluginFiles": [
+    {
+      "sha256": "d9261a22c26ca2c078d498ba0abc106761036dd27e22395065b5aa009e921a78",
+      "path": ".craft-plugin/plugin.json"
+    },
+    {
+      "sha256": "1dc190016770b645904aad10c45bc7b0d64e23b84d43aa5f6909eb33510c5fb1",
+      "path": "assets/blender-small.svg"
+    },
+    {
+      "sha256": "ba8ae9c4adf9c969b763b7539ee5183e925dbcd3759187ebb7a13be888df49db",
+      "path": "assets/blender.svg"
+    },
+    {
+      "sha256": "3a001e599e9f5989bfb2f21a4f8579671c39a953ef509552d87060218cbad91b",
+      "path": "bridge/bootstrap.py"
+    },
+    {
+      "sha256": "f38e4eaca013a70e2f1bfd0f166a75edcea79ef3ddd06f775aad4f487c537d7d",
+      "path": "bridge/dotcraft_bridge/__init__.py"
+    },
+    {
+      "sha256": "cc31977bcb634d1407d9ce93bc560bb7889983af267a90dc8a64e8eeb50cd2c6",
+      "path": "bridge/dotcraft_bridge/api.py"
+    },
+    {
+      "sha256": "e6788cbd1b95542443e8d094b07f3b3c5d38a78c28a744340c7d32ebda22cb6e",
+      "path": "bridge/dotcraft_bridge/blender_manifest.toml"
+    },
+    {
+      "sha256": "20f6381f78a4bb39f25ff0ac7da6efa4a17a1601fff090a543c3ecf8f42090db",
+      "path": "bridge/dotcraft_bridge/commands.py"
+    },
+    {
+      "sha256": "ed393e009caec838c329d29e940168e641e8075f58eba1e8e60562c732b4f91a",
+      "path": "bridge/dotcraft_bridge/jobs.py"
+    },
+    {
+      "sha256": "4e42feeab4fd3b59c58b8ad64e4565e0f60362a538b59f0b61339a724ddc1d6b",
+      "path": "bridge/dotcraft_bridge/protocol.py"
+    },
+    {
+      "sha256": "138de8e2755f8561db6ac912b3bff8e7a7ab7e48d8752818ecc0eda07600eb0b",
+      "path": "bridge/dotcraft_bridge/server.py"
+    },
+    {
+      "sha256": "5bc982f525425bfba706227c8be9e8cbaeeb4b216a460ff8d45e1934c6463db3",
+      "path": "lib/DotCraft.Blender.Attach.dll"
+    },
+    {
+      "sha256": "430b2a7ff0a209baf2e9553b0bc6282ba2e16bc2eb98b279b2b61950c8b1ad33",
+      "path": "lib/DotCraft.Blender.deps.json"
+    },
+    {
+      "sha256": "485c07d94f187cf516a55f1539fb4ffc975e9220a7295acaf080c84127785c7c",
+      "path": "lib/DotCraft.Blender.dll"
+    },
+    {
+      "sha256": "a67be6c285eae161a2a023fd444b7279158a1e66682be5a163ad29b24ad36ac0",
+      "path": "skills/blender/SKILL.md"
+    },
+    {
+      "sha256": "409151424d814d260ce5413e2bf3a357a7b0f62ea9e2e997d65d50ff5d7f6d66",
+      "path": "skills/blender/agents/openai.yaml"
+    }
+  ],
+  "pluginId": "blender",
+  "minHostVersion": "0.6.9",
+  "sourceDirty": false
+}

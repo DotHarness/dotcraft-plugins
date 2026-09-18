@@ -1,0 +1,6 @@
+interface:
+  display_name: "Blender"
+  short_description: "Inspect or drive a running Blender session with DotCraft."
+  icon_small: "../../assets/blender-small.svg"
+  icon_large: "../../assets/blender.svg"
+  default_prompt: "Use $blender to look at my Blender scene and tell me what is in it."
