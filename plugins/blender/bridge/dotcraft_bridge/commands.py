@@ -5,6 +5,7 @@ import contextlib
 import io
 import os
 import tempfile
+import time
 import traceback
 
 import bpy
@@ -204,8 +205,11 @@ def _render(params):
         scene.render.resolution_x, scene.render.resolution_y = params["resolution"]
     if params.get("frame") is not None:
         scene.frame_set(int(params["frame"]))
-    scene.render.filepath = filepath
-    scene.render.image_settings.file_format = "PNG"
+    # Blender always appends the frame number and its own extension to `filepath`, so it is given
+    # the requested path without one and the result is moved onto the exact path afterwards.
+    scene.render.image_settings.file_format = _format_for(filepath)
+    scene.render.use_file_extension = True
+    scene.render.filepath = os.path.splitext(filepath)[0]
 
     job = jobs.create(
         "render",
@@ -218,9 +222,13 @@ def _render(params):
     )
 
     if bpy.app.background or _api.view3d() is None:
-        # No modal path without a window: render synchronously and report the outcome.
         try:
             bpy.ops.render.render(write_still=True)
+            for candidate in _candidates(filepath):
+                if os.path.exists(candidate):
+                    if os.path.abspath(candidate) != os.path.abspath(filepath):
+                        os.replace(candidate, filepath)
+                    break
             job.complete({"filepath": filepath, "bytes": _size(filepath)})
         except Exception:
             job.fault(traceback.format_exc())
@@ -229,6 +237,60 @@ def _render(params):
     _install_render_handlers(job)
     bpy.ops.render.render("INVOKE_DEFAULT", write_still=True)
     return job.snapshot()
+
+
+FORMATS = {
+    ".png": "PNG",
+    ".jpg": "JPEG",
+    ".jpeg": "JPEG",
+    ".exr": "OPEN_EXR",
+    ".tif": "TIFF",
+    ".tiff": "TIFF",
+    ".webp": "WEBP",
+    ".bmp": "BMP",
+    ".tga": "TARGA",
+}
+
+
+def _format_for(filepath):
+    return FORMATS.get(os.path.splitext(filepath)[1].lower(), "PNG")
+
+
+COLLECT_TIMEOUT = 60.0
+
+
+def _candidates(filepath):
+    """Where the still may land: write_still appends the format's own extension to the path."""
+    base = os.path.splitext(filepath)[0]
+    return [filepath, base] + [base + ext for ext in FORMATS]
+
+
+def _collect_when_written(job):
+    """Finish the job once the file exists, moving it onto the exact requested path.
+
+    render_complete fires before the still reaches disk, and `bpy.context` is restricted inside a
+    handler, so the wait runs on a timer and looks only at the filesystem.
+    """
+    filepath = job.detail["filepath"]
+    deadline = time.time() + COLLECT_TIMEOUT
+
+    def _poll():
+        for candidate in _candidates(filepath):
+            if not os.path.exists(candidate):
+                continue
+            try:
+                if os.path.abspath(candidate) != os.path.abspath(filepath):
+                    os.replace(candidate, filepath)
+                job.complete({"filepath": filepath, "bytes": _size(filepath)})
+            except Exception:
+                job.fault(traceback.format_exc())
+            return None
+        if time.time() > deadline:
+            job.fault("Blender wrote no output for %r." % filepath)
+            return None
+        return 0.05
+
+    bpy.app.timers.register(_poll)
 
 
 def _set_engine(scene, engine):
@@ -246,9 +308,9 @@ def _install_render_handlers(job):
     handlers = bpy.app.handlers
 
     def _finish(*_args):
+        # render_complete fires before the still is on disk, so the move waits for the file.
         _remove()
-        path = job.detail["filepath"]
-        job.complete({"filepath": path, "bytes": _size(path)})
+        _collect_when_written(job)
 
     def _cancel(*_args):
         _remove()

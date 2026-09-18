@@ -7,7 +7,7 @@ from . import server
 bl_info = {
     "name": "DotCraft Bridge",
     "author": "DotHarness",
-    "version": (0, 1, 0),
+    "version": (0, 1, 1),
     "blender": (4, 2, 0),
     "category": "Development",
     "description": "Let DotCraft inspect and drive this Blender session.",

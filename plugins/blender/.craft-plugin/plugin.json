@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "blender",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "displayName": "Blender",
   "description": "Inspect and drive a running Blender session.",
   "capabilities": ["dotnet", "skill"],
@@ -15,7 +15,10 @@
     "capabilities": ["Skill", "Blender", "Read", "Write"],
     "defaultPrompt": "Look at my Blender scene and tell me what is in it.",
     "composerIcon": "./assets/blender-small.svg",
-    "logo": "./assets/blender.svg"
+    "logo": "./assets/blender.svg",
+    "websiteUrl": "https://github.com/DotHarness/dotcraft-blender",
+    "privacyPolicyUrl": "https://github.com/DotHarness/dotcraft-blender",
+    "termsOfServiceUrl": "https://github.com/DotHarness/dotcraft-blender"
   },
   "dotnet": {
     "displayName": "Blender integration",
