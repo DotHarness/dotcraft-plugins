@@ -137,9 +137,9 @@
       "category": "Engineering"
     },
     {
-      "name": "DotCraft.Unity",
+      "name": "unity",
       "source": {
-        "path": "./plugins/DotCraft.Unity",
+        "path": "./plugins/unity",
         "source": "local"
       },
       "policy": {
