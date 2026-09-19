@@ -11,7 +11,7 @@
     "shortDescription": "Drive a running Blender session",
     "longDescription": "Blender connects DotCraft to a live Blender session: read the scene, run Python on Blender's main thread, capture the viewport, and start renders without blocking the app.",
     "developerName": "DotHarness",
-    "category": "Engineering",
+    "category": "Design",
     "capabilities": ["Skill", "Blender", "Read", "Write"],
     "defaultPrompt": "Look at my Blender scene and tell me what is in it.",
     "composerIcon": "./assets/blender-small.svg",
