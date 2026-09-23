@@ -1,38 +1,8 @@
 {
-  "sourceDirty": false,
-  "schemaVersion": 1,
-  "files": [
-    {
-      "path": "com.dotcraft.unity-0.4.3.zip",
-      "sha256": "c0d4ee9d71ca00e051b7a6e1c832068beaae0753ac5e6b1b1c69ce910de4af2b"
-    },
-    {
-      "path": "dotcraft-unity.exe",
-      "sha256": "4602b6a90cd599134f2fe2db23bfe236a6739f05058f10b52d4e063ecc59cd01"
-    },
-    {
-      "path": "gateway-artifact.json",
-      "sha256": "520ff547817ddff633987b0015332cb0f067ac1a8d55f668cd8b7c1cc476f705"
-    },
-    {
-      "path": "install.ps1",
-      "sha256": "825ab70b5fb0ed81ab2d85a20c2cd60ac90262345cf580bfe2f4f3e6f7451eac"
-    },
-    {
-      "path": "THIRD-PARTY-NOTICES.txt",
-      "sha256": "177df7b4a6883c430e5b258fc7d8b633c732627d36c04513725cf871462af824"
-    },
-    {
-      "path": "Unity-0.4.3.zip",
-      "sha256": "44479c10572046d5cf40066936d90612df9062e961c7c9b0eef22e14b73ada97"
-    }
-  ],
-  "commit": "a65f091c162ebcfde5ec9b399d188fcc57261947",
-  "platform": "win-x64",
   "pluginFiles": [
     {
       "path": ".craft-plugin/plugin.json",
-      "sha256": "1d9ab6030ff0327427d95cd868ba4fbb7319519fdfde038c33e990a9f216af85"
+      "sha256": "efb91da5ac303e9a471b900652eaf7c58c226f821d2f2be81a83ce6a196cffa6"
     },
     {
       "path": "assets/unity.svg",
@@ -40,15 +10,15 @@
     },
     {
       "path": "lib/DotCraft.Unity.Attach.dll",
-      "sha256": "bb45c7a96e1b7f6d566518b75834ab1c65b1c6faf289d5adc8a24df8279c2466"
+      "sha256": "1738d36a63cf2c4b9cd292ff7646c1d5223d6918c0f8d4d335faeba653366f2d"
     },
     {
       "path": "lib/DotCraft.Unity.deps.json",
-      "sha256": "3f79fcdd5188fe8fc5e4d49fd543a408f10c245503d1a77b115b55bd091dea8f"
+      "sha256": "e3aa3a83e649706c2b8a70a013ce7dbbde45030e2a24c0da62587bb6fa456c5a"
     },
     {
       "path": "lib/DotCraft.Unity.dll",
-      "sha256": "b48d59537f187584a69d6b7b6782c30355485213c188e74ab42219e47caff7e4"
+      "sha256": "f1a4cbce06781106299d600f95cf0a75384f8853f9aca13d45e02436b94bb3e9"
     },
     {
       "path": "lib/Microsoft.CodeAnalysis.CSharp.dll",
@@ -91,10 +61,36 @@
       "sha256": "8e90b59ccf7ee7c786b54ed74d9a349a0637fb63bdf118ff2290778e410009ab"
     }
   ],
+  "files": [
+    {
+      "path": "artifact.json",
+      "sha256": "750ef9f9a17180bca3acc17df689b9de1388ac6d0ff5cf34784a0afdf9807106"
+    },
+    {
+      "path": "com.dotcraft.unity-0.4.4.zip",
+      "sha256": "9d295b825764a2e423ce3e2201d18fe7f6db7cde3fd70191816e4f1fad39fb01"
+    },
+    {
+      "path": "dotcraft-unity.exe",
+      "sha256": "37af4503901cdbfb7ad03b455e70b14b49a54028f932bad500e4b96174349de5"
+    },
+    {
+      "path": "install.ps1",
+      "sha256": "f5667699d8f4ee03ae2ee8295b42406f1461e15464179d11be265ae7c1b470ed"
+    },
+    {
+      "path": "Unity-0.4.4.zip",
+      "sha256": "2b5dc3ff871b874aef07398f45cc33d63c83c7ba97b8f749351b89885d2ad597"
+    }
+  ],
+  "version": "0.4.4",
   "harnessPackage": {
     "id": "DotCraft.Harness",
     "version": "0.6.7",
     "contentHash": "Gy3cBJRjcgcDU/H+0+fUuyXmXuQJfBaA1oY3SS0HSnTuxkO3rXUXdaUMQez9zoXkUwxIOoRKpN+kq+zks9Isvg=="
   },
-  "version": "0.4.3"
+  "schemaVersion": 1,
+  "sourceDirty": false,
+  "commit": "082dd84962d38bfb49269c84a6ee1d0332430ba0",
+  "platform": "win-x64"
 }
