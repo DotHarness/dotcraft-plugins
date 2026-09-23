@@ -6,10 +6,10 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v10.0": {
-      "DotCraft.Unity/0.4.3": {
+      "DotCraft.Unity/0.4.4": {
         "dependencies": {
           "DotCraft.Harness": "0.6.7",
-          "DotCraft.Unity.Attach": "0.4.3"
+          "DotCraft.Unity.Attach": "0.4.4"
         },
         "runtime": {
           "DotCraft.Unity.dll": {}
@@ -286,21 +286,21 @@
           "SourceGear.sqlite3": "3.50.4.5"
         }
       },
-      "DotCraft.Unity.Attach/0.4.3": {
+      "DotCraft.Unity.Attach/0.4.4": {
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp": "5.3.0"
         },
         "runtime": {
           "DotCraft.Unity.Attach.dll": {
-            "assemblyVersion": "0.4.3.0",
-            "fileVersion": "0.4.3.0"
+            "assemblyVersion": "0.4.4.0",
+            "fileVersion": "0.4.4.0"
           }
         }
       }
     }
   },
   "libraries": {
-    "DotCraft.Unity/0.4.3": {
+    "DotCraft.Unity/0.4.4": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -340,7 +340,7 @@
       "path": "sqlitepclraw.bundle_e_sqlite3/3.0.3",
       "hashPath": "sqlitepclraw.bundle_e_sqlite3.3.0.3.nupkg.sha512"
     },
-    "DotCraft.Unity.Attach/0.4.3": {
+    "DotCraft.Unity.Attach/0.4.4": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

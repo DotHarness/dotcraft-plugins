@@ -137,18 +137,6 @@
       "category": "Engineering"
     },
     {
-      "name": "unity",
-      "source": {
-        "path": "./plugins/unity",
-        "source": "local"
-      },
-      "policy": {
-        "authentication": "ON_INSTALL",
-        "installation": "AVAILABLE"
-      },
-      "category": "Engineering"
-    },
-    {
       "name": "blender",
       "source": {
         "source": "local",
@@ -159,6 +147,18 @@
         "installation": "AVAILABLE"
       },
       "category": "Design"
+    },
+    {
+      "name": "unity",
+      "source": {
+        "source": "local",
+        "path": "./plugins/unity"
+      },
+      "policy": {
+        "authentication": "ON_INSTALL",
+        "installation": "AVAILABLE"
+      },
+      "category": "Engineering"
     }
   ]
 }
