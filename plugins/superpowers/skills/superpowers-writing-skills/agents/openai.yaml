@@ -1,5 +1,0 @@
-interface:
-  display_name: "Writing Skills"
-  short_description: "Create and verify skills before deployment"
-  icon_small: "../../assets/superpowers-small.svg"
-  icon_large: "../../assets/superpowers-small.svg"

@@ -1,5 +1,0 @@
-interface:
-  display_name: "Using Git Worktrees"
-  short_description: "Create isolated git worktrees for parallel feature work"
-  icon_small: "../../assets/superpowers-small.svg"
-  icon_large: "../../assets/superpowers-small.svg"
