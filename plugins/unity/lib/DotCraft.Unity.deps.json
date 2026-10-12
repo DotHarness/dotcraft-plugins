@@ -6,19 +6,20 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v10.0": {
-      "DotCraft.Unity/0.4.4": {
+      "DotCraft.Unity/0.5.0": {
         "dependencies": {
-          "DotCraft.Harness": "0.6.7",
-          "DotCraft.Unity.Attach": "0.4.4"
+          "DotCraft.Harness": "0.8.5",
+          "DotCraft.Unity.Attach": "0.5.0"
         },
         "runtime": {
           "DotCraft.Unity.dll": {}
         }
       },
-      "DotCraft.Harness/0.6.7": {
+      "DotCraft.Harness/0.8.5": {
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp": "5.3.0",
-          "SQLitePCLRaw.bundle_e_sqlite3": "3.0.3"
+          "SQLitePCLRaw.bundle_e_sqlite3": "3.0.3",
+          "System.Management.Automation": "7.6.6"
         }
       },
       "Microsoft.CodeAnalysis.Common/5.3.0": {
@@ -119,6 +120,178 @@
           },
           "lib/net10.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll": {
             "locale": "zh-Hant"
+          }
+        }
+      },
+      "Microsoft.Management.Infrastructure/3.0.0": {
+        "dependencies": {
+          "Microsoft.Management.Infrastructure.Runtime.Win": "3.0.0"
+        }
+      },
+      "Microsoft.Management.Infrastructure.Runtime.Win/3.0.0": {
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/microsoft.management.infrastructure.native.unmanaged.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "10.0.17763.30000"
+          },
+          "runtimes/win-x64/native/microsoft.management.infrastructure.native.unmanaged.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "6.3.9600.18144"
+          },
+          "runtimes/win-x86/native/microsoft.management.infrastructure.native.unmanaged.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "6.3.9600.18144"
+          }
+        }
+      },
+      "Microsoft.PowerShell.Native/700.0.0": {
+        "runtimeTargets": {
+          "runtimes/linux-arm/native/build.manifest": {
+            "rid": "linux-arm",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-arm/native/build.manifest.sig": {
+            "rid": "linux-arm",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-arm/native/libpsl-native.so": {
+            "rid": "linux-arm",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-arm64/native/build.manifest": {
+            "rid": "linux-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-arm64/native/build.manifest.sig": {
+            "rid": "linux-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-arm64/native/libpsl-native.so": {
+            "rid": "linux-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-musl-x64/native/build.manifest": {
+            "rid": "linux-musl-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-musl-x64/native/build.manifest.sig": {
+            "rid": "linux-musl-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-musl-x64/native/libpsl-native.so": {
+            "rid": "linux-musl-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/build.manifest": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/build.manifest.sig": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/libpsl-native.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx/native/libpsl-native.dylib": {
+            "rid": "osx",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-arm64/native/PowerShell.Core.Instrumentation.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "10.0.10011.16384"
+          },
+          "runtimes/win-arm64/native/build.manifest": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-arm64/native/build.manifest.sig": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-arm64/native/pwrshplugin.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "10.0.10011.16384"
+          },
+          "runtimes/win-x64/native/PowerShell.Core.Instrumentation.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "10.0.10011.16384"
+          },
+          "runtimes/win-x64/native/build.manifest": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/build.manifest.sig": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/pwrshplugin.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "10.0.10011.16384"
+          },
+          "runtimes/win-x86/native/PowerShell.Core.Instrumentation.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "10.0.10011.16384"
+          },
+          "runtimes/win-x86/native/build.manifest": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/build.manifest.sig": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/pwrshplugin.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "10.0.10011.16384"
+          }
+        }
+      },
+      "Microsoft.Security.Extensions/1.4.0": {
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/getfilesiginforedist.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/getfilesiginforedist.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/getfilesiginforedist.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -286,31 +459,38 @@
           "SourceGear.sqlite3": "3.50.4.5"
         }
       },
-      "DotCraft.Unity.Attach/0.4.4": {
+      "System.Management.Automation/7.6.6": {
+        "dependencies": {
+          "Microsoft.Management.Infrastructure": "3.0.0",
+          "Microsoft.PowerShell.Native": "700.0.0",
+          "Microsoft.Security.Extensions": "1.4.0"
+        }
+      },
+      "DotCraft.Unity.Attach/0.5.0": {
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp": "5.3.0"
         },
         "runtime": {
           "DotCraft.Unity.Attach.dll": {
-            "assemblyVersion": "0.4.4.0",
-            "fileVersion": "0.4.4.0"
+            "assemblyVersion": "0.5.0.0",
+            "fileVersion": "0.5.0.0"
           }
         }
       }
     }
   },
   "libraries": {
-    "DotCraft.Unity/0.4.4": {
+    "DotCraft.Unity/0.5.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "DotCraft.Harness/0.6.7": {
+    "DotCraft.Harness/0.8.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Gy3cBJRjcgcDU/H+0+fUuyXmXuQJfBaA1oY3SS0HSnTuxkO3rXUXdaUMQez9zoXkUwxIOoRKpN+kq+zks9Isvg==",
-      "path": "dotcraft.harness/0.6.7",
-      "hashPath": "dotcraft.harness.0.6.7.nupkg.sha512"
+      "sha512": "sha512-5XFVMeyDgsDn6MmFV0MPMsaFinqE9PUgp1wZP1fkbCAco7zg6n+NE8o1zWKZOm1LA5onfChGb97gMZjL2CDVvg==",
+      "path": "dotcraft.harness/0.8.5",
+      "hashPath": "dotcraft.harness.0.8.5.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.Common/5.3.0": {
       "type": "package",
@@ -326,6 +506,34 @@
       "path": "microsoft.codeanalysis.csharp/5.3.0",
       "hashPath": "microsoft.codeanalysis.csharp.5.3.0.nupkg.sha512"
     },
+    "Microsoft.Management.Infrastructure/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cGZi0q5IujCTVYKo9h22Pw+UwfZDV82HXO8HTxMG2HqntPlT3Ls8jY6punLp4YzCypJNpfCAu2kae3TIyuAiJw==",
+      "path": "microsoft.management.infrastructure/3.0.0",
+      "hashPath": "microsoft.management.infrastructure.3.0.0.nupkg.sha512"
+    },
+    "Microsoft.Management.Infrastructure.Runtime.Win/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uwMyWN33+iQ8Wm/n1yoPXgFoiYNd0HzJyoqSVhaQZyJfaQrJR3udgcIHjqa1qbc3lS6kvfuUMN4TrF4U4refCQ==",
+      "path": "microsoft.management.infrastructure.runtime.win/3.0.0",
+      "hashPath": "microsoft.management.infrastructure.runtime.win.3.0.0.nupkg.sha512"
+    },
+    "Microsoft.PowerShell.Native/700.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-F1L0wFLzMn01kbt75VQwXjRtpO21yJuPhRvwkrkunPVU8eyLdb1RHVigHIbBSIw7xV5rF6S+1fC0SWWJ1M3J5Q==",
+      "path": "microsoft.powershell.native/700.0.0",
+      "hashPath": "microsoft.powershell.native.700.0.0.nupkg.sha512"
+    },
+    "Microsoft.Security.Extensions/1.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MnHXttc0jHbRrGdTJ+yJBbGDoa4OXhtnKXHQw70foMyAooFtPScZX/dN+Nib47nuglc9Gt29Gfb5Zl+1lAuTeA==",
+      "path": "microsoft.security.extensions/1.4.0",
+      "hashPath": "microsoft.security.extensions.1.4.0.nupkg.sha512"
+    },
     "SourceGear.sqlite3/3.50.4.5": {
       "type": "package",
       "serviceable": true,
@@ -340,7 +548,14 @@
       "path": "sqlitepclraw.bundle_e_sqlite3/3.0.3",
       "hashPath": "sqlitepclraw.bundle_e_sqlite3.3.0.3.nupkg.sha512"
     },
-    "DotCraft.Unity.Attach/0.4.4": {
+    "System.Management.Automation/7.6.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-K2tjjPyuLm5z92aceHCJDdEYlcYOdny0uAxsePdPeGfjHYjH7vVsNQpuHhzJEe3Jwd/69mz4ek7/qrj3lKpQTA==",
+      "path": "system.management.automation/7.6.6",
+      "hashPath": "system.management.automation.7.6.6.nupkg.sha512"
+    },
+    "DotCraft.Unity.Attach/0.5.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
