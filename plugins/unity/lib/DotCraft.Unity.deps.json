@@ -6,16 +6,16 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v10.0": {
-      "DotCraft.Unity/0.5.0": {
+      "DotCraft.Unity/0.5.1": {
         "dependencies": {
-          "DotCraft.Harness": "0.8.5",
-          "DotCraft.Unity.Attach": "0.5.0"
+          "DotCraft.Harness": "0.8.6",
+          "DotCraft.Unity.Attach": "0.5.1"
         },
         "runtime": {
           "DotCraft.Unity.dll": {}
         }
       },
-      "DotCraft.Harness/0.8.5": {
+      "DotCraft.Harness/0.8.6": {
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp": "5.3.0",
           "SQLitePCLRaw.bundle_e_sqlite3": "3.0.3",
@@ -466,31 +466,31 @@
           "Microsoft.Security.Extensions": "1.4.0"
         }
       },
-      "DotCraft.Unity.Attach/0.5.0": {
+      "DotCraft.Unity.Attach/0.5.1": {
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp": "5.3.0"
         },
         "runtime": {
           "DotCraft.Unity.Attach.dll": {
-            "assemblyVersion": "0.5.0.0",
-            "fileVersion": "0.5.0.0"
+            "assemblyVersion": "0.5.1.0",
+            "fileVersion": "0.5.1.0"
           }
         }
       }
     }
   },
   "libraries": {
-    "DotCraft.Unity/0.5.0": {
+    "DotCraft.Unity/0.5.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "DotCraft.Harness/0.8.5": {
+    "DotCraft.Harness/0.8.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-5XFVMeyDgsDn6MmFV0MPMsaFinqE9PUgp1wZP1fkbCAco7zg6n+NE8o1zWKZOm1LA5onfChGb97gMZjL2CDVvg==",
-      "path": "dotcraft.harness/0.8.5",
-      "hashPath": "dotcraft.harness.0.8.5.nupkg.sha512"
+      "sha512": "sha512-RYXFe2MSSqMoKuCXklM3S/qL4gTzXDLC2KBeemMFp0xlEKESoC463V+bRmUpO+eJxpXAXYagVn/XK7PNLJz4hQ==",
+      "path": "dotcraft.harness/0.8.6",
+      "hashPath": "dotcraft.harness.0.8.6.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.Common/5.3.0": {
       "type": "package",
@@ -555,7 +555,7 @@
       "path": "system.management.automation/7.6.6",
       "hashPath": "system.management.automation.7.6.6.nupkg.sha512"
     },
-    "DotCraft.Unity.Attach/0.5.0": {
+    "DotCraft.Unity.Attach/0.5.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

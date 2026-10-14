@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "unity",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "displayName": "Unity",
   "description": "Inspect and automate a running Unity Editor.",
   "capabilities": [
@@ -41,7 +41,7 @@
   "dotnet": {
     "displayName": "Unity integration",
     "description": "Provides native C# execution tools for Unity Editor.",
-    "minHostVersion": "0.8.5",
+    "minHostVersion": "0.8.6",
     "entryAssembly": "./lib/DotCraft.Unity.dll",
     "entryType": "DotCraft.Unity.Plugin"
   }
