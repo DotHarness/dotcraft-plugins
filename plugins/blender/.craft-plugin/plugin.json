@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "blender",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "displayName": "Blender",
   "description": "Inspect and drive a running Blender session.",
   "capabilities": ["dotnet", "skill"],
@@ -23,7 +23,7 @@
   "dotnet": {
     "displayName": "Blender integration",
     "description": "Native tools for a connected Blender session.",
-    "minHostVersion": "0.6.9",
+    "minHostVersion": "0.8.6",
     "entryAssembly": "./lib/DotCraft.Blender.dll",
     "entryType": "DotCraft.Blender.Plugin"
   }
