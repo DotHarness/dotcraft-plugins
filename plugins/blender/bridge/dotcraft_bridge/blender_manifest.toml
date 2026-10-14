@@ -1,7 +1,7 @@
 schema_version = "1.0.0"
 
 id = "dotcraft_bridge"
-version = "0.1.1"
+version = "0.1.2"
 name = "DotCraft Bridge"
 tagline = "Let DotCraft inspect and drive this Blender session"
 maintainer = "DotHarness <https://github.com/DotHarness>"
