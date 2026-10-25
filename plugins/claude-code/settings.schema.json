@@ -1,0 +1,7 @@
+{
+  "fields": [
+    { "key": "executablePath", "type": "text", "defaultValue": "claude" },
+    { "key": "idleTimeoutSeconds", "type": "number", "defaultValue": 3600, "min": 10, "max": 3600 },
+    { "key": "allowExtraUsage", "type": "bool", "defaultValue": false }
+  ]
+}

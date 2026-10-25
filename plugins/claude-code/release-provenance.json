@@ -1,0 +1,40 @@
+{
+  "repository": "DotHarness/dotcraft-claude-bridge",
+  "commit": "ba2fa6ca31bda61e47a221a3459503ef5e6d7b00",
+  "version": "0.1.0",
+  "pluginFiles": [
+    {
+      "sha256": "f3137acc3bf60a927ac4b058c3c63ca296965a3c65f9bf8e17f9bcf32d27d1a9",
+      "path": ".craft-plugin/plugin.json"
+    },
+    {
+      "sha256": "7a066b6cc06502d0653889a0490796c1c52293bc821a92979588b0c8c771d72c",
+      "path": "assets/claude-code.svg"
+    },
+    {
+      "sha256": "5e71923ee0663fd3e1b7505c2a13c0b9d9682ca630e51edc038a58639d77c6ff",
+      "path": "desktop/dist/index.css"
+    },
+    {
+      "sha256": "6cfb95d5bcd03d52f3e48e58b32128eb2ec5b93ad35e82805103d67c447117cc",
+      "path": "desktop/dist/index.mjs"
+    },
+    {
+      "sha256": "850f7707e2b13cea49e77482a080d5777021973cc25338ad223cd8f320c7277f",
+      "path": "lib/DotHarness.ClaudeCode.Plugin.deps.json"
+    },
+    {
+      "sha256": "ef539118784172c99b79df56f64c08d5a266014cdc56cfde309622205f15d5d2",
+      "path": "lib/DotHarness.ClaudeCode.Plugin.dll"
+    },
+    {
+      "sha256": "4a62028eadb2ed50a99189716d81e85c2b370bad16bb2e2f220e91be4fdb28ea",
+      "path": "lib/ModelContextProtocol.AspNetCore.dll"
+    },
+    {
+      "sha256": "d4c65c2e4ae635367caffa0a7f49bbfbf4afc444bfd429313af6c43355f0edf3",
+      "path": "settings.schema.json"
+    }
+  ],
+  "schemaVersion": 1
+}

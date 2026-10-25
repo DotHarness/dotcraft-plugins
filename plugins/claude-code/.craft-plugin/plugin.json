@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "claude-code",
+  "version": "0.1.0",
+  "displayName": "Claude Code",
+  "description": "Use your Claude subscription for DotCraft conversations.",
+  "capabilities": ["dotnet", "desktop"],
+  "settings": "./settings.schema.json",
+  "interface": {
+    "displayName": "Claude Code",
+    "shortDescription": "Use your Claude subscription in DotCraft",
+    "longDescription": "Chat in DotCraft with the Claude Code account signed in on your computer, and keep an eye on your subscription limits in the Composer.",
+    "developerName": "DotHarness",
+    "category": "Engineering",
+    "capabilities": ["Chat", "Reasoning", "Vision", "Tool calling"],
+    "defaultPrompt": "Help me complete the next task in this project.",
+    "composerIcon": "./assets/claude-code.svg",
+    "logo": "./assets/claude-code.svg",
+    "websiteUrl": "https://github.com/DotHarness/dotcraft"
+  },
+  "desktop": {
+    "description": "Shows Claude subscription limits in the Composer and warns when a limit is used up.",
+    "entry": "./desktop/dist/index.mjs",
+    "styles": ["./desktop/dist/index.css"]
+  },
+  "dotnet": {
+    "displayName": "Claude Code models",
+    "description": "Adds Claude Code as a model provider.",
+    "minHostVersion": "0.9.4",
+    "entryAssembly": "./lib/DotHarness.ClaudeCode.Plugin.dll",
+    "entryType": "DotCraft.ClaudeCode.Plugin"
+  }
+}
