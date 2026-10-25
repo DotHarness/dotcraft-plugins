@@ -11,6 +11,16 @@ on:
         description: Marketplace category for the plugin.
         required: true
         type: string
+      plugin-path:
+        description: Path of the plugin root inside the artifact.
+        required: false
+        type: string
+        default: .
+      provenance:
+        description: Optional path inside the artifact of a release manifest to publish as the plugin's provenance.
+        required: false
+        type: string
+        default: ''
     secrets:
       MARKETPLACE_APP_PRIVATE_KEY:
         required: true
@@ -47,12 +57,15 @@ jobs:
         env:
           TAG: ${{ github.ref_name }}
           CATEGORY: ${{ inputs.category }}
+          PLUGIN_PATH: ${{ inputs.plugin-path }}
+          PROVENANCE: ${{ inputs.provenance }}
           REPOSITORY: ${{ github.repository }}
           COMMIT: ${{ github.sha }}
         run: |
           echo "version=${TAG#v}" >> "$GITHUB_OUTPUT"
-          node marketplace/scripts/stage-plugin.mjs --source plugin --category "$CATEGORY" \
-            --version "${TAG#v}" --repository "$REPOSITORY" --commit "$COMMIT"
+          node marketplace/scripts/stage-plugin.mjs --source "plugin/$PLUGIN_PATH" --category "$CATEGORY" \
+            --version "${TAG#v}" --repository "$REPOSITORY" --commit "$COMMIT" \
+            ${PROVENANCE:+--provenance "plugin/$PROVENANCE"}
           node marketplace/scripts/validate-registry.mjs
       - uses: peter-evans/create-pull-request@v7
         with:

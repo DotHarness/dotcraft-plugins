@@ -26,5 +26,10 @@ publish:
   secrets: inherit
 ```
 
+When the plugin root is a folder inside the artifact, pass it as `plugin-path`.
+A repository that writes its own release manifest passes its path inside the
+artifact as `provenance`; the manifest must name the released commit and version
+and must not be marked `sourceDirty`.
+
 The calling repository must be able to read the organization variable
 `MARKETPLACE_APP_ID` and the organization secret `MARKETPLACE_APP_PRIVATE_KEY`.

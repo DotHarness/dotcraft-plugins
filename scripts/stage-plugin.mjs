@@ -10,7 +10,8 @@ const { values } = parseArgs({
     category: { type: 'string' },
     version: { type: 'string' },
     repository: { type: 'string' },
-    commit: { type: 'string' }
+    commit: { type: 'string' },
+    provenance: { type: 'string' }
   }
 })
 for (const name of ['source', 'category', 'version', 'repository', 'commit']) {
@@ -42,12 +43,11 @@ const pluginFiles = files(target).sort().map((path) => ({
   sha256: createHash('sha256').update(readFileSync(join(target, path))).digest('hex'),
   path
 }))
-const provenance = {
-  repository: values.repository,
-  commit: values.commit,
-  version: values.version,
-  pluginFiles,
-  schemaVersion: 1
+const provenance = values.provenance
+  ? JSON.parse(readFileSync(values.provenance, 'utf8'))
+  : { repository: values.repository, commit: values.commit, version: values.version, pluginFiles, schemaVersion: 1 }
+if (provenance.version !== values.version || provenance.commit !== values.commit || provenance.sourceDirty === true) {
+  throw new Error('Release provenance must describe a clean build of the released commit and version.')
 }
 writeFileSync(join(target, 'release-provenance.json'), JSON.stringify(provenance, null, 2) + '\n')
 
