@@ -1,0 +1,67 @@
+name: Publish plugin
+
+on:
+  workflow_call:
+    inputs:
+      artifact:
+        description: Name of the uploaded artifact that holds the plugin root.
+        required: true
+        type: string
+      category:
+        description: Marketplace category for the plugin.
+        required: true
+        type: string
+    secrets:
+      MARKETPLACE_APP_PRIVATE_KEY:
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: ${{ inputs.artifact }}
+          path: plugin
+      - uses: actions/create-github-app-token@v2
+        id: app
+        with:
+          app-id: ${{ vars.MARKETPLACE_APP_ID }}
+          private-key: ${{ secrets.MARKETPLACE_APP_PRIVATE_KEY }}
+          owner: DotHarness
+          repositories: dotcraft-plugins
+      - uses: actions/checkout@v6
+        with:
+          repository: DotHarness/dotcraft-plugins
+          token: ${{ steps.app.outputs.token }}
+          path: marketplace
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Stage plugin
+        id: stage
+        env:
+          TAG: ${{ github.ref_name }}
+          CATEGORY: ${{ inputs.category }}
+          REPOSITORY: ${{ github.repository }}
+          COMMIT: ${{ github.sha }}
+        run: |
+          echo "version=${TAG#v}" >> "$GITHUB_OUTPUT"
+          node marketplace/scripts/stage-plugin.mjs --source plugin --category "$CATEGORY" \
+            --version "${TAG#v}" --repository "$REPOSITORY" --commit "$COMMIT"
+          node marketplace/scripts/validate-registry.mjs
+      - uses: peter-evans/create-pull-request@v7
+        with:
+          path: marketplace
+          token: ${{ steps.app.outputs.token }}
+          branch: updates/${{ steps.stage.outputs.id }}-${{ steps.stage.outputs.version }}
+          commit-message: Update ${{ steps.stage.outputs.id }} to ${{ steps.stage.outputs.version }}
+          title: Update ${{ steps.stage.outputs.id }} to ${{ steps.stage.outputs.version }}
+          body: Plugin files and release provenance from ${{ github.repository }}@${{ github.sha }}. Maintainer review and merge are required.
+          add-paths: |
+            plugins/${{ steps.stage.outputs.id }}/**
+            .craft/plugins/marketplace.json
