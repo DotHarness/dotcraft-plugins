@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Claude Code</title>
+  <desc id="desc">Clawd's default terminal pose on a charcoal background.</desc>
+  <rect width="64" height="64" rx="14" fill="#262624"/>
+  <g fill="#D77757">
+    <path d="M14 18h36v12h6v6h-6v6H14v-6H8v-6h6Z"/>
+    <path d="M17 42h3v6h-3Zm6 0h3v6h-3Zm15 0h3v6h-3Zm6 0h3v6h-3Z"/>
+  </g>
+  <path d="M20 24h3v6h-3Zm21 0h3v6h-3Z" fill="#000"/>
+</svg>
