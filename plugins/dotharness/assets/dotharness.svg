@@ -1,9 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none" role="img" aria-labelledby="title desc">
   <title id="title">DotHarness</title>
-  <desc id="desc">The white DotHarness mark on a full-bleed black square.</desc>
+  <desc id="desc">The faceted white DotHarness hammer mark on a black rounded square.</desc>
   <rect width="48" height="48" rx="10" fill="#050505"/>
-  <g transform="translate(1 2)">
-    <path d="M14 16C14 11.58 17.58 8 22 8H39V16H30V26C30 31.52 25.52 36 20 36V16H14Z" fill="#F8FAFC"/>
-    <circle cx="11" cy="28" r="4" fill="#F8FAFC"/>
+  <g transform="scale(0.09375) translate(4 0)">
+    <path d="M224 200H320V304A96 96 0 0 1 224 400Z" fill="#7D7D7D"/>
+    <path d="M224 200H328L224 304Z" fill="#C9C9C9"/>
+    <path d="M144 208A96 96 0 0 1 240 112H400V208Z" fill="#F8FAFC"/>
+    <circle cx="160" cy="304" r="40" fill="#F8FAFC"/>
   </g>
 </svg>
