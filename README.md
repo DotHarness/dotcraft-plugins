@@ -8,6 +8,8 @@ lives under `plugins/<pluginId>/` and must contain `.craft-plugin/plugin.json`.
 
 The marketplace index lives at `.craft/plugins/marketplace.json`.
 
+To propose a plugin, see [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## Publishing from a plugin repository
 
 A plugin repository builds its plugin root, uploads it as an artifact, and calls

@@ -361,6 +361,9 @@ if (!marketplace || !Array.isArray(marketplace.plugins)) {
     if (manifest.id !== name) {
       fail(`${name}: manifest id '${manifest.id}' does not match marketplace name`)
     }
+    if (entry.category !== manifest.interface?.category) {
+      fail(`${name}: category '${entry.category}' does not match manifest interface.category '${manifest.interface?.category}'`)
+    }
     validateManifestReferences(name, resolved.full, manifest)
   }
 }
