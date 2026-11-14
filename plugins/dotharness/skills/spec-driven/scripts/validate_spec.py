@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate DotHarness-style Markdown specifications."""
+"""Validate Markdown specifications: errors for structure, warnings for content a spec should not hold."""
 
 from __future__ import annotations
 
@@ -21,6 +21,28 @@ SEMVER_RE = re.compile(
 LINK_RE = re.compile(r"\[([^\]]+)]\(([^)\n]+)\)")
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*#*\s*$")
 WINDOWS_ABSOLUTE_RE = re.compile(r"^[A-Za-z]:[\\/]")
+HISTORY_RE = re.compile(
+    r"\b(legacy|until now|deprecated|backward[- ]compat\w*|migrations?|upgrade notes?)\b",
+    re.IGNORECASE,
+)
+EMPHASIS_RE = re.compile(r"\b(MUST|NEVER|ALWAYS|CRITICAL|IMPORTANT|SHALL)\b")
+TEMPORARY_RE = re.compile(r"\b(TODO|TBD|FIXME|WIP)\b")
+IMPLEMENTATION_RE = re.compile(
+    r"\b[A-Z][a-z0-9]+(?:[A-Z][a-z0-9]+)*(?:Async|Endpoints?|Controller|Repository|Projection|Persistence|Handler|Manager|Impl)\b"
+    r"|\b[\w./-]+\.(?:cs|ts|tsx|jsx|py|go|java|kt|sql|rs|cpp)\b"
+    r"|(?<![\w.])src/"
+)
+BOILERPLATE_RE = re.compile(
+    r"^#{2,6}\s+(overview|scope|goals?|non-goals|verification|acceptance(?: scenarios| criteria| checklist)?"
+    r"|related spec(?:ification)?s|open questions)\s*$",
+    re.IGNORECASE,
+)
+SOURCE_SUFFIXES = {
+    ".cs", ".ts", ".tsx", ".js", ".jsx", ".mjs", ".cjs", ".py", ".go", ".java", ".kt", ".kts",
+    ".swift", ".rs", ".cpp", ".cc", ".h", ".hpp", ".css", ".scss", ".vue", ".svelte",
+}
+SKIPPED_DIRECTORIES = {".git", "node_modules", "bin", "obj", "dist", "build", "out", ".venv", "target"}
+SPEC_CITATION_RE = re.compile(r"specs/[\w./-]+\.md|\bDESIGN\.md\b")
 
 
 @dataclass(frozen=True)
@@ -28,6 +50,7 @@ class Issue:
     path: Path
     line: int
     message: str
+    warning: bool = False
 
 
 def _strip_markup(value: str) -> str:
@@ -169,10 +192,42 @@ def _links(text: str, path: Path, repo_root: Path) -> tuple[set[Path], list[Issu
     return targets, issues
 
 
+def _content_warnings(lines: list[str], path: Path, external_format: bool = False) -> list[Issue]:
+    issues: list[Issue] = []
+    protocol = "protocols" in (part.lower() for part in path.parts)
+    fence: str | None = None
+    for line_number, line in enumerate(lines, 1):
+        stripped = line.lstrip()
+        if stripped.startswith(("```", "~~~")):
+            marker = stripped[:3]
+            if fence is None and not protocol:
+                issues.append(Issue(path, line_number, "code block: specs state behavior, not code", True))
+            fence = None if fence == marker else marker if fence is None else fence
+            continue
+        if fence is not None:
+            continue
+        if not external_format and BOILERPLATE_RE.match(stripped):
+            issues.append(Issue(path, line_number, "boilerplate section: fold unique rules into the body and drop it", True))
+        prose = re.sub(r"\]\([^)]*\)", "]", line)
+        for pattern, message in (
+            (HISTORY_RE, "history or migration wording: state the current rule only"),
+            (EMPHASIS_RE, "capitalized emphasis: state the rule at normal volume"),
+            (TEMPORARY_RE, "temporary content: keep plans and TODOs out of specs"),
+            (IMPLEMENTATION_RE, "implementation detail: describe the behavior the code keeps"),
+        ):
+            match = pattern.search(prose)
+            if match:
+                issues.append(Issue(path, line_number, f"{message} ({match.group(0)!r})", True))
+    return issues
+
+
 def validate_text(text: str, path: Path, repo_root: Path | None = None) -> list[Issue]:
     path = path.resolve()
     repo_root = (repo_root or _repo_root(path)).resolve()
     lines = text.splitlines()
+    if lines and lines[0].strip() == "---":
+        _, link_issues = _links(text, path, repo_root)
+        return link_issues + _content_warnings(lines, path, external_format=True)
     metadata, issues = _metadata(lines, path)
 
     h1_lines = [line_number for line_number, line in enumerate(lines, 1) if re.fullmatch(r"#\s+\S.*", line.strip())]
@@ -210,6 +265,23 @@ def validate_text(text: str, path: Path, repo_root: Path | None = None) -> list[
 
     _, link_issues = _links(text, path, repo_root)
     issues.extend(link_issues)
+    issues.extend(_content_warnings(lines, path))
+    return issues
+
+
+def validate_code(root: Path) -> list[Issue]:
+    issues: list[Issue] = []
+    for path in sorted(root.rglob("*")):
+        if path.suffix.lower() not in SOURCE_SUFFIXES or SKIPPED_DIRECTORIES.intersection(path.relative_to(root).parts):
+            continue
+        try:
+            lines = path.read_text(encoding="utf-8-sig").splitlines()
+        except (OSError, UnicodeError):
+            continue
+        for line_number, line in enumerate(lines, 1):
+            match = SPEC_CITATION_RE.search(line)
+            if match:
+                issues.append(Issue(path, line_number, f"code cites a spec ({match.group(0)}): state the fact or drop the comment"))
     return issues
 
 
@@ -241,20 +313,29 @@ def validate_index(index: Path, specs: list[Path]) -> list[Issue]:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("specs", nargs="+", type=Path, help="Markdown specification files to validate")
-    parser.add_argument("--index", type=Path, help="optional specification index that must reference every input spec")
+    parser.add_argument("specs", nargs="*", type=Path, help="Markdown specification files to validate")
+    parser.add_argument("--index", type=Path, help="specification index that must reference every input spec")
+    parser.add_argument("--code", type=Path, action="append", default=[], help="source directory to scan for comments citing specs")
+    parser.add_argument("--strict", action="store_true", help="fail on warnings as well as errors")
     args = parser.parse_args(argv)
+    if not args.specs and not args.code:
+        parser.error("give spec paths, --code directories, or both")
 
     specs = [path.resolve() for path in args.specs]
     issues = [issue for spec in specs for issue in validate_file(spec)]
     if args.index is not None:
         issues.extend(validate_index(args.index, specs))
+    for root in args.code:
+        issues.extend(validate_code(root.resolve()))
 
-    if issues:
-        for issue in sorted(issues, key=lambda value: (str(value.path), value.line, value.message)):
-            print(f"{issue.path}:{issue.line}: {issue.message}", file=sys.stderr)
+    errors = [issue for issue in issues if not issue.warning]
+    warnings = [issue for issue in issues if issue.warning]
+    for issue in sorted(issues, key=lambda value: (str(value.path), value.line, value.message)):
+        kind = "warning" if issue.warning else "error"
+        print(f"{issue.path}:{issue.line}: {kind}: {issue.message}", file=sys.stderr)
+    if errors or (args.strict and warnings):
         return 1
-    print(f"[validate-spec] OK ({len(specs)} spec{'s' if len(specs) != 1 else ''})")
+    print(f"[validate-spec] OK ({len(specs)} spec{'s' if len(specs) != 1 else ''}, {len(warnings)} warning{'s' if len(warnings) != 1 else ''})")
     return 0
 
 

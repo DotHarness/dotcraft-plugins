@@ -14,6 +14,7 @@ Use the product's maintained design system to make design decisions executable, 
 3. Confirm the surface, intended user outcome, constraints, relevant states, and behavior that must remain stable.
 4. Extend the established product language unless the user explicitly asks to explore a new direction.
 5. Keep production source read-only until the user approves the design and requests implementation.
+6. When the repository has a design spec, record a design decision there with `$spec-driven` before or together with the prototype, so the prototype demonstrates the spec rather than replacing it.
 
 ## Choose the direction
 
