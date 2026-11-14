@@ -1,0 +1,25 @@
+{
+  "name": "dotharness",
+  "version": "0.2.1",
+  "description": "Official DotHarness workflows for Harness Engineering.",
+  "author": {
+    "name": "DotHarness",
+    "url": "https://github.com/DotHarness"
+  },
+  "homepage": "https://github.com/DotHarness/dotcraft-plugins",
+  "repository": "https://github.com/DotHarness/dotcraft-plugins",
+  "keywords": ["spec-driven", "specification", "workflow", "design-system", "cleanup"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "DotHarness",
+    "shortDescription": "Official workflows for Harness Engineering.",
+    "longDescription": "Official DotHarness workflows for consistent, high-quality Harness Engineering across products and technology stacks.",
+    "developerName": "DotHarness",
+    "category": "Engineering",
+    "capabilities": ["Skill"],
+    "defaultPrompt": ["Help me choose and apply the right DotHarness workflow for this Harness Engineering task."],
+    "composerIcon": "./assets/dotharness.svg",
+    "logo": "./assets/dotharness.svg",
+    "websiteURL": "https://github.com/DotHarness/dotcraft-plugins"
+  }
+}
