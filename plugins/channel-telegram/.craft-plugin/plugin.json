@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "channel-telegram",
+  "version": "0.1.0",
+  "displayName": "Telegram",
+  "description": "Message the bot in Telegram and DotCraft replies in the same chat.",
+  "capabilities": ["channel"],
+  "channel": {
+    "manifest": "./channel/manifest.json",
+    "entry": "./channel/dist/cli.bundle.mjs",
+    "minHostVersion": "0.14.0"
+  },
+  "interface": {
+    "displayName": "Telegram",
+    "shortDescription": "Send and receive messages via a BotFather bot.",
+    "longDescription": "Message the bot in Telegram and DotCraft replies in the same chat. Replies can include formatted text, images, files, audio, and video.",
+    "developerName": "DotHarness",
+    "category": "Channels",
+    "capabilities": ["Channel"],
+    "defaultPrompt": "Turn this Telegram update into a workspace action item.",
+    "logo": "./assets/icon.svg",
+    "composerIcon": "./assets/icon.svg",
+    "websiteUrl": "https://www.dotcraft.net/guide/channels/telegram"
+  }
+}
