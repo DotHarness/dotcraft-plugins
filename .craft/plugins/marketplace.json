@@ -111,6 +111,18 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Engineering"
+    },
+    {
+      "name": "channel-weixin",
+      "source": {
+        "source": "local",
+        "path": "./plugins/channel-weixin"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Channels"
     }
   ]
 }
