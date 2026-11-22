@@ -111,6 +111,18 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Engineering"
+    },
+    {
+      "name": "channel-telegram",
+      "source": {
+        "source": "local",
+        "path": "./plugins/channel-telegram"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Channels"
     }
   ]
 }
