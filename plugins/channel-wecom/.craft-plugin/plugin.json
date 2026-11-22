@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "channel-wecom",
+  "version": "0.1.0",
+  "displayName": "WeCom",
+  "description": "Message the bot in WeCom and DotCraft replies in the same chat.",
+  "capabilities": ["channel"],
+  "channel": {
+    "manifest": "./channel/manifest.json",
+    "entry": "./channel/dist/cli.bundle.mjs",
+    "minHostVersion": "0.14.0"
+  },
+  "interface": {
+    "displayName": "WeCom",
+    "shortDescription": "Send and receive messages through a group bot.",
+    "longDescription": "Message the bot in WeCom and DotCraft replies in the same chat. Only whitelisted users and chats get replies. Replies can include text, images, files, and voice.",
+    "developerName": "DotHarness",
+    "category": "Channels",
+    "capabilities": ["Channel"],
+    "defaultPrompt": "Sync this WeCom thread into project memory.",
+    "logo": "./assets/icon.svg",
+    "composerIcon": "./assets/icon.svg",
+    "websiteUrl": "https://www.dotcraft.net/guide/channels/wecom"
+  }
+}

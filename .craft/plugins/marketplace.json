@@ -111,6 +111,18 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Engineering"
+    },
+    {
+      "name": "channel-wecom",
+      "source": {
+        "source": "local",
+        "path": "./plugins/channel-wecom"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Channels"
     }
   ]
 }
