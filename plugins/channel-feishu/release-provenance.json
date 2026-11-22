@@ -1,0 +1,44 @@
+{
+  "repository": "DotHarness/dotcraft-channels",
+  "commit": "1b12f401ab7f029d7a3e6af8d1908d3bafd339fa",
+  "version": "0.1.0",
+  "pluginFiles": [
+    {
+      "sha256": "a43c54cef80ec810cf4fd0034cd911507cd8c4dab21da3d0d41c3f6c917f1cff",
+      "path": ".craft-plugin/plugin.json"
+    },
+    {
+      "sha256": "50e6751797c50dedd75ef1b8a0d9e42f5f8472e9fbce91f34718e9f97b0c780a",
+      "path": "LICENSE"
+    },
+    {
+      "sha256": "eb094ab95f6ec08f22e8d301d828bbd7ac492994b42e60686c45772d6bd1db2b",
+      "path": "THIRD_PARTY_LICENSES.txt"
+    },
+    {
+      "sha256": "df344b5ad1fd69514bc94c9516587d025f0eb2bcdc8530cf4981b0dea0ea1de5",
+      "path": "assets/icon.svg"
+    },
+    {
+      "sha256": "7ffc485eaa1fde4b7c229cbff34e403e0decb7dacb3115da7a51a0bdb6c7c965",
+      "path": "channel/assets/loading.gif"
+    },
+    {
+      "sha256": "4f7ab9c43456b4c334302a405a93a25fc2879efd2fd2d1b134fc8784b1437f2d",
+      "path": "channel/dist/cli.bundle.mjs"
+    },
+    {
+      "sha256": "c2eaa3e8f674d00891c1645cded88a730ebed80d6ed69a2ebcd16d86cdd8e5da",
+      "path": "channel/manifest.json"
+    },
+    {
+      "sha256": "620aac1a7f43192df17e827538003bdf4973a1fedc1125565187a96468b68be8",
+      "path": "channel/official-cli/lark-cli-shortcuts.json"
+    },
+    {
+      "sha256": "4709fdb52355f8744bc5a7d6a657e01bb4858b95f9d4248424ae13f96079df69",
+      "path": "channel/official-cli/lark-cli.lock.json"
+    }
+  ],
+  "schemaVersion": 1
+}
