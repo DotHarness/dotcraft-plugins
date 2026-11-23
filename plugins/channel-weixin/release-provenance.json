@@ -1,0 +1,32 @@
+{
+  "repository": "DotHarness/dotcraft-channels",
+  "commit": "1b12f401ab7f029d7a3e6af8d1908d3bafd339fa",
+  "version": "0.1.0",
+  "pluginFiles": [
+    {
+      "sha256": "cf9166c693f6ac728850162dbc0684ec9f4cad9ad046a7f027717c823a0077c6",
+      "path": ".craft-plugin/plugin.json"
+    },
+    {
+      "sha256": "50e6751797c50dedd75ef1b8a0d9e42f5f8472e9fbce91f34718e9f97b0c780a",
+      "path": "LICENSE"
+    },
+    {
+      "sha256": "c4f76e3a06dc93a087f4cb9571035ec71ec41c6ab0c2bd50554c67f555f06af8",
+      "path": "THIRD_PARTY_LICENSES.txt"
+    },
+    {
+      "sha256": "249523358efd6e141138c757c62b899e42fefaffa6b1226fb1e8085fc58f3030",
+      "path": "assets/icon.svg"
+    },
+    {
+      "sha256": "c6d0ab5d3ea3cb5e22559defc2da0190485f5bfa77bd343652c0e6e4fd9fe23d",
+      "path": "channel/dist/cli.bundle.mjs"
+    },
+    {
+      "sha256": "390f3fcddba4c6823a38739c29cb00ba7d81c1e79db17abfc0c9cbac935ccbf5",
+      "path": "channel/manifest.json"
+    }
+  ],
+  "schemaVersion": 1
+}

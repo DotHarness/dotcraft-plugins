@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "channel-weixin",
+  "version": "0.1.0",
+  "displayName": "WeChat",
+  "description": "Message DotCraft in the WeChat ClawBot chat and it replies in the same chat.",
+  "capabilities": ["channel"],
+  "channel": {
+    "manifest": "./channel/manifest.json",
+    "entry": "./channel/dist/cli.bundle.mjs",
+    "minHostVersion": "0.14.0"
+  },
+  "interface": {
+    "displayName": "WeChat",
+    "shortDescription": "Send and receive messages via WeChat ClawBot.",
+    "longDescription": "Message DotCraft in the WeChat ClawBot chat and it replies in the same chat. Replies are plain text and can include images and files.",
+    "developerName": "DotHarness",
+    "category": "Channels",
+    "capabilities": ["Channel"],
+    "defaultPrompt": "Capture this WeChat request and draft a reply.",
+    "logo": "./assets/icon.svg",
+    "composerIcon": "./assets/icon.svg",
+    "websiteUrl": "https://www.dotcraft.net/guide/channels/weixin"
+  }
+}
