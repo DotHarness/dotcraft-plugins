@@ -123,6 +123,54 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Channels"
+    },
+    {
+      "name": "channel-feishu",
+      "source": {
+        "source": "local",
+        "path": "./plugins/channel-feishu"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Channels"
+    },
+    {
+      "name": "channel-qq",
+      "source": {
+        "source": "local",
+        "path": "./plugins/channel-qq"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Channels"
+    },
+    {
+      "name": "channel-wecom",
+      "source": {
+        "source": "local",
+        "path": "./plugins/channel-wecom"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Channels"
+    },
+    {
+      "name": "channel-weixin",
+      "source": {
+        "source": "local",
+        "path": "./plugins/channel-weixin"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Channels"
     }
   ]
 }

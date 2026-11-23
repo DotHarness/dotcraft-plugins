@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "channel-qq",
+  "version": "0.1.0",
+  "displayName": "QQ",
+  "description": "Message the bot in QQ and DotCraft replies in the same chat.",
+  "capabilities": ["channel"],
+  "channel": {
+    "manifest": "./channel/manifest.json",
+    "entry": "./channel/dist/cli.bundle.mjs",
+    "minHostVersion": "0.14.0"
+  },
+  "interface": {
+    "displayName": "QQ",
+    "shortDescription": "Send and receive messages through NapCat.",
+    "longDescription": "Message the bot in QQ and DotCraft replies in the same chat. In groups, mention the bot. Replies can include text, images, files, voice, and video.",
+    "developerName": "DotHarness",
+    "category": "Channels",
+    "capabilities": ["Channel"],
+    "defaultPrompt": "Track this QQ group task and record the blockers.",
+    "logo": "./assets/icon.svg",
+    "composerIcon": "./assets/icon.svg",
+    "websiteUrl": "https://www.dotcraft.net/guide/channels/qq"
+  }
+}

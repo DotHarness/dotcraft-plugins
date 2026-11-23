@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "channel-feishu",
+  "version": "0.1.0",
+  "displayName": "Feishu",
+  "description": "Message the bot in Feishu and DotCraft replies in the same chat.",
+  "capabilities": ["channel"],
+  "channel": {
+    "manifest": "./channel/manifest.json",
+    "entry": "./channel/dist/cli.bundle.mjs",
+    "minHostVersion": "0.14.0"
+  },
+  "interface": {
+    "displayName": "Feishu",
+    "shortDescription": "Send and receive messages via a custom app bot.",
+    "longDescription": "Message the bot in Feishu and DotCraft replies in the same chat. In groups, mention the bot. Replies can include formatted text, images, and files, and approvals appear as cards.",
+    "developerName": "DotHarness",
+    "category": "Channels",
+    "capabilities": ["Channel"],
+    "defaultPrompt": "Summarize this Feishu thread and save the next action to workspace memory.",
+    "logo": "./assets/icon.svg",
+    "composerIcon": "./assets/icon.svg",
+    "websiteUrl": "https://www.dotcraft.net/guide/channels/feishu"
+  }
+}
