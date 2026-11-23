@@ -171,6 +171,18 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Channels"
+    },
+    {
+      "name": "antigravity",
+      "source": {
+        "source": "local",
+        "path": "./plugins/antigravity"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Engineering"
     }
   ]
 }

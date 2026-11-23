@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "antigravity",
+  "version": "0.1.0",
+  "displayName": "Antigravity",
+  "description": "Use your Google Antigravity account in DotCraft.",
+  "capabilities": ["dotnet", "desktop"],
+  "settings": "./settings.schema.json",
+  "interface": {
+    "displayName": "Antigravity",
+    "shortDescription": "Use your Google Antigravity account in DotCraft",
+    "longDescription": "Chat in DotCraft with the Antigravity account signed in on your computer, and keep an eye on your quota limits in the Composer.",
+    "developerName": "DotHarness",
+    "category": "Engineering",
+    "capabilities": ["Chat", "Reasoning", "Vision", "Tool calling"],
+    "defaultPrompt": "Help me complete the next task in this project.",
+    "composerIcon": "./assets/antigravity.svg",
+    "logo": "./assets/antigravity.svg",
+    "websiteUrl": "https://github.com/DotHarness/dotcraft"
+  },
+  "desktop": {
+    "description": "Warns in the Composer when an Antigravity limit is reached or account verification is required.",
+    "entry": "./desktop/dist/index.mjs",
+    "styles": ["./desktop/dist/index.css"]
+  },
+  "dotnet": {
+    "displayName": "Antigravity models",
+    "description": "Adds Antigravity as a model provider.",
+    "minHostVersion": "0.13.1",
+    "entryAssembly": "./lib/DotHarness.Antigravity.Plugin.dll",
+    "entryType": "DotCraft.Antigravity.Plugin"
+  }
+}

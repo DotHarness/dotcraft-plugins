@@ -1,0 +1,36 @@
+{
+  "fields": [
+    {
+      "key": "executablePath",
+      "type": "text",
+      "title": "Antigravity CLI executable",
+      "description": "Path to the official agy binary. Leave as agy to auto-detect on PATH and standard install locations.",
+      "defaultValue": "agy"
+    },
+    {
+      "key": "idleTimeoutSeconds",
+      "type": "number",
+      "title": "Idle worker timeout (seconds)",
+      "description": "How long to keep an idle agy worker process running before shelving its conversation for resume.",
+      "defaultValue": 900,
+      "min": 10,
+      "max": 3600
+    },
+    {
+      "key": "allowAiCredits",
+      "type": "bool",
+      "title": "Allow AI credits",
+      "description": "Enable Google One AI credits overage (useG1Credits) in the isolated agy configuration after regular quota runs out.",
+      "defaultValue": false
+    },
+    {
+      "key": "requestTimeoutSeconds",
+      "type": "number",
+      "title": "Request timeout (seconds)",
+      "description": "Maximum time to wait for an agy sampling turn before failing the request.",
+      "defaultValue": 300,
+      "min": 30,
+      "max": 1800
+    }
+  ]
+}

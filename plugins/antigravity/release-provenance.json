@@ -1,0 +1,40 @@
+{
+  "repository": "DotHarness/dotcraft-antigravity",
+  "commit": "9f193303488a337df0f9ce956feba25d12011f26",
+  "version": "0.1.0",
+  "pluginFiles": [
+    {
+      "sha256": "7a2df632e2f9394e6cfb43354e5d1f0f37592ba3d8e6d687498ea97b5777273e",
+      "path": ".craft-plugin/plugin.json"
+    },
+    {
+      "sha256": "4560e8c8c8004df3b5199fba3dd4f52badbf270c7d9d1a156c78dde633800efb",
+      "path": "assets/antigravity.svg"
+    },
+    {
+      "sha256": "4e33714e6a27f68ba5e177d3da4a331c16b415c8a731b42bccded4a9a0c99e7c",
+      "path": "desktop/dist/index.css"
+    },
+    {
+      "sha256": "1bd26c8f31b6faf5773e0f2b4dfe7d805f6756b50ef1291235fc2342d7be830b",
+      "path": "desktop/dist/index.mjs"
+    },
+    {
+      "sha256": "e67a804b0130719aa722630b83e7569bffccf68e66b913495d633a1b0c5c0fab",
+      "path": "lib/DotHarness.Antigravity.Plugin.deps.json"
+    },
+    {
+      "sha256": "cfdc5f9be45070f29cad8f65a5a32474fc41235b6019071df1c88c343093852f",
+      "path": "lib/DotHarness.Antigravity.Plugin.dll"
+    },
+    {
+      "sha256": "3b0fa27821e6220571b93365886452d9d5383d90fdf01bf57e4432ab6deac940",
+      "path": "lib/ModelContextProtocol.AspNetCore.dll"
+    },
+    {
+      "sha256": "cc901f9ee5af09d7dececa6446d290651813adebc25cd65a8862cf68e36a5422",
+      "path": "settings.schema.json"
+    }
+  ],
+  "schemaVersion": 1
+}
