@@ -9,6 +9,7 @@
       "DotHarness.Antigravity.Plugin/1.0.0": {
         "dependencies": {
           "DotCraft.Harness": "0.13.1",
+          "Microsoft.Data.Sqlite": "10.0.11",
           "ModelContextProtocol.AspNetCore": "2.4.0"
         },
         "runtime": {
@@ -17,6 +18,7 @@
       },
       "DotCraft.Core/0.13.1": {
         "dependencies": {
+          "Microsoft.Data.Sqlite": "10.0.11",
           "ModelContextProtocol": "2.4.0",
           "SQLitePCLRaw.bundle_e_sqlite3": "3.0.3",
           "System.Management.Automation": "7.6.6"
@@ -30,6 +32,25 @@
       "DotCraft.Runtime/0.13.1": {
         "dependencies": {
           "DotCraft.Core": "0.13.1"
+        }
+      },
+      "Microsoft.Data.Sqlite/10.0.11": {
+        "dependencies": {
+          "Microsoft.Data.Sqlite.Core": "10.0.11",
+          "SQLitePCLRaw.bundle_e_sqlite3": "3.0.3",
+          "SQLitePCLRaw.core": "3.0.3"
+        }
+      },
+      "Microsoft.Data.Sqlite.Core/10.0.11": {
+        "dependencies": {
+          "SQLitePCLRaw.core": "3.0.3"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Data.Sqlite.dll": {
+            "assemblyVersion": "10.0.11.0",
+            "fileVersion": "10.0.1126.37416",
+            "localPath": "Microsoft.Data.Sqlite.dll"
+          }
         }
       },
       "Microsoft.Extensions.AI.Abstractions/10.11.0": {
@@ -472,7 +493,41 @@
       },
       "SQLitePCLRaw.bundle_e_sqlite3/3.0.3": {
         "dependencies": {
+          "SQLitePCLRaw.config.e_sqlite3": "3.0.3",
           "SourceGear.sqlite3": "3.50.4.5"
+        }
+      },
+      "SQLitePCLRaw.config.e_sqlite3/3.0.3": {
+        "dependencies": {
+          "SQLitePCLRaw.provider.e_sqlite3": "3.0.3"
+        },
+        "runtime": {
+          "lib/net8.0/SQLitePCLRaw.batteries_v2.dll": {
+            "assemblyVersion": "3.0.3.3048",
+            "fileVersion": "3.0.3.3048",
+            "localPath": "SQLitePCLRaw.batteries_v2.dll"
+          }
+        }
+      },
+      "SQLitePCLRaw.core/3.0.3": {
+        "runtime": {
+          "lib/net8.0/SQLitePCLRaw.core.dll": {
+            "assemblyVersion": "3.0.3.3048",
+            "fileVersion": "3.0.3.3048",
+            "localPath": "SQLitePCLRaw.core.dll"
+          }
+        }
+      },
+      "SQLitePCLRaw.provider.e_sqlite3/3.0.3": {
+        "dependencies": {
+          "SQLitePCLRaw.core": "3.0.3"
+        },
+        "runtime": {
+          "lib/net8.0/SQLitePCLRaw.provider.e_sqlite3.dll": {
+            "assemblyVersion": "3.0.3.3048",
+            "fileVersion": "3.0.3.3048",
+            "localPath": "SQLitePCLRaw.provider.e_sqlite3.dll"
+          }
         }
       },
       "System.Management.Automation/7.6.6": {
@@ -510,6 +565,20 @@
       "sha512": "sha512-woWijY1H3DPMAU/x9mSE9l6aeYR/F7MKTM6XFqzqqg3hFJ4h3NHz1GS+R42E1VKlusCwq5yCW5ro5jS5J1kykw==",
       "path": "dotcraft.runtime/0.13.1",
       "hashPath": "dotcraft.runtime.0.13.1.nupkg.sha512"
+    },
+    "Microsoft.Data.Sqlite/10.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7je7UELzm131GiLYc4PpZvfKXIgIyzPM+v+tjcd/nbnuWRfgcONYKzDTqJlURxwVCFsVnlpmq6y6yn4qvR8QXQ==",
+      "path": "microsoft.data.sqlite/10.0.11",
+      "hashPath": "microsoft.data.sqlite.10.0.11.nupkg.sha512"
+    },
+    "Microsoft.Data.Sqlite.Core/10.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hubA20AGenQ4Sx0ElWaPpB8DISjXpdx463+1zOGRslsT0e/t/06ITv+pHsop8CcJ0d8PZLfgnT7juCDVD79Dkw==",
+      "path": "microsoft.data.sqlite.core/10.0.11",
+      "hashPath": "microsoft.data.sqlite.core.10.0.11.nupkg.sha512"
     },
     "Microsoft.Extensions.AI.Abstractions/10.11.0": {
       "type": "package",
@@ -580,6 +649,27 @@
       "sha512": "sha512-Zt8jmSL5zcDWGk8rmzhWBJ6IRyLWh1yWS04Pg72+GIvo3Ba4E/rG4Y/4l7AWlSEogEbzyKRTCXUAs1v/O7Pkkg==",
       "path": "sqlitepclraw.bundle_e_sqlite3/3.0.3",
       "hashPath": "sqlitepclraw.bundle_e_sqlite3.3.0.3.nupkg.sha512"
+    },
+    "SQLitePCLRaw.config.e_sqlite3/3.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-caP/ap0X2fyVmstCXu5ueOmcr2XWAxA2XyKghV7H4bOAFmq3nWcsGl9q44iY1HYG+i8Qr4G9XEqdfti0rV6/ZQ==",
+      "path": "sqlitepclraw.config.e_sqlite3/3.0.3",
+      "hashPath": "sqlitepclraw.config.e_sqlite3.3.0.3.nupkg.sha512"
+    },
+    "SQLitePCLRaw.core/3.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bjm6FY4lZyP+t7GmiuvSM0QXpFihAvyE0Y9O2yibm3g95AAWJPNnHOKVNJGyPTGIKuK7Pr4Wh8Rd8/aOtAclQw==",
+      "path": "sqlitepclraw.core/3.0.3",
+      "hashPath": "sqlitepclraw.core.3.0.3.nupkg.sha512"
+    },
+    "SQLitePCLRaw.provider.e_sqlite3/3.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wd+fGvZTrr3BJNe48opSczmC176Okd61ZgoZNQcdvZwkek6to978ccdpcFmNo5GHxCnk29KwT+f+lAZYgfLVZg==",
+      "path": "sqlitepclraw.provider.e_sqlite3/3.0.3",
+      "hashPath": "sqlitepclraw.provider.e_sqlite3.3.0.3.nupkg.sha512"
     },
     "System.Management.Automation/7.6.6": {
       "type": "package",
