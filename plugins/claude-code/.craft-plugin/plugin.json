@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "claude-code",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "displayName": "Claude Code",
   "description": "Use your Claude subscription for DotCraft conversations.",
   "capabilities": ["dotnet", "desktop"],
@@ -19,14 +19,14 @@
     "websiteUrl": "https://github.com/DotHarness/dotcraft"
   },
   "desktop": {
-    "description": "Shows Claude subscription limits in the Composer and warns when a limit is used up.",
+    "description": "Warns in the Composer when a Claude limit is reached or extra usage is blocked.",
     "entry": "./desktop/dist/index.mjs",
     "styles": ["./desktop/dist/index.css"]
   },
   "dotnet": {
     "displayName": "Claude Code models",
     "description": "Adds Claude Code as a model provider.",
-    "minHostVersion": "0.9.4",
+    "minHostVersion": "0.14.2",
     "entryAssembly": "./lib/DotHarness.ClaudeCode.Plugin.dll",
     "entryType": "DotCraft.ClaudeCode.Plugin"
   }
