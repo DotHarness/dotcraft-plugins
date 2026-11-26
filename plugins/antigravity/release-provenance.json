@@ -1,10 +1,10 @@
 {
   "repository": "DotHarness/dotcraft-antigravity",
-  "commit": "82363dcc0b74b1bffa8f1b3f84f4696d45634cef",
-  "version": "0.1.5",
+  "commit": "fd65afda8f04a7728f6d9b34edfaf8e46814e6c1",
+  "version": "0.1.6",
   "pluginFiles": [
     {
-      "sha256": "59c16974749882f14cdc86e2e26cf3be7eed68b46ca9f0930e66d801da98aba7",
+      "sha256": "b8166a55c25522638d42ed985eeeb2aa5550ac07e7d10b82bd531aae5ae90eff",
       "path": ".craft-plugin/plugin.json"
     },
     {
@@ -20,11 +20,11 @@
       "path": "desktop/dist/index.mjs"
     },
     {
-      "sha256": "13daaffe5cdf721c2f20200a6443c4dd9f5d8a436b77d657b2c096633ed19c54",
+      "sha256": "69474b48de8ea5038018ec892c92924209510ac2751d9d92f68f0fc1df579aa3",
       "path": "lib/DotHarness.Antigravity.Plugin.deps.json"
     },
     {
-      "sha256": "c36e6117b6073a54ca39b10d59be875731c083c51e5972a9d2ac0aede262b7c8",
+      "sha256": "91809607c5b98517d7031a38c53cd00f2b3c3949fb19e747f8543f8d0087e3a3",
       "path": "lib/DotHarness.Antigravity.Plugin.dll"
     },
     {

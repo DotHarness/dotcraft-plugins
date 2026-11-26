@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "antigravity",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "displayName": "Antigravity",
   "description": "Use your Google Antigravity account in DotCraft.",
   "capabilities": ["dotnet", "desktop"],
@@ -26,7 +26,7 @@
   "dotnet": {
     "displayName": "Antigravity models",
     "description": "Adds Antigravity as a model provider.",
-    "minHostVersion": "0.13.1",
+    "minHostVersion": "0.14.3",
     "entryAssembly": "./lib/DotHarness.Antigravity.Plugin.dll",
     "entryType": "DotCraft.Antigravity.Plugin"
   }
