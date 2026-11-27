@@ -27,7 +27,7 @@
       "key": "requestTimeoutSeconds",
       "type": "number",
       "title": "Request timeout (seconds)",
-      "description": "Maximum time to wait for an agy sampling turn before failing the request.",
+      "description": "Maximum time for ACP setup or for an agy sampling round to start producing output or requesting tools.",
       "defaultValue": 300,
       "min": 30,
       "max": 1800
