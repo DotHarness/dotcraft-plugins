@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "claude-code",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "displayName": "Claude Code",
   "description": "Use your Claude subscription for DotCraft conversations.",
   "capabilities": ["dotnet", "desktop"],
@@ -26,7 +26,7 @@
   "dotnet": {
     "displayName": "Claude Code models",
     "description": "Adds Claude Code as a model provider.",
-    "minHostVersion": "0.14.2",
+    "minHostVersion": "0.14.4",
     "entryAssembly": "./lib/DotHarness.ClaudeCode.Plugin.dll",
     "entryType": "DotCraft.ClaudeCode.Plugin"
   }

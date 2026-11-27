@@ -1,14 +1,14 @@
 {
   "repository": "DotHarness/dotcraft-claude-code",
-  "commit": "a5a114135104cd0198e6330badd4e828a0fe5d31",
-  "version": "0.1.1",
+  "commit": "34e1af2c77b0b856ce6bc86367b584883ca20644",
+  "version": "0.1.2",
   "pluginFiles": [
     {
-      "sha256": "a1692e6c6eca99c87bc463ff979ac90ce1ef8f57dfc8adc74b3ca776495e4aa0",
+      "sha256": "e178f74764315bb40f3f1fddb60e5dc4745aaf66e8a3cbd71c4de751537fdc06",
       "path": ".craft-plugin/plugin.json"
     },
     {
-      "sha256": "e6fac53fcdbd4d48dba9c1fa59af6c4532b12d6b0b3c696da960e9e4956a9655",
+      "sha256": "fec63864909c4ce0a030fe589d6c8c0f9f6c3e1b735380b1beada0af2d740f64",
       "path": "assets/claude-code.svg"
     },
     {
@@ -20,11 +20,11 @@
       "path": "desktop/dist/index.mjs"
     },
     {
-      "sha256": "f642c8336db9a612b02f174d98584e523cd2ca2b58c029849fd5a312731da69c",
+      "sha256": "3ef42e3e39d6bced7ca3ea553dce05d4b03fc9ea833bb20799c7a4ef1a08ce6d",
       "path": "lib/DotHarness.ClaudeCode.Plugin.deps.json"
     },
     {
-      "sha256": "386ed72198d15b679102f11141230823eb76669e5e921e3adcc3063d8ae20d0b",
+      "sha256": "12364ad3326ad0c8e96fe4b2c1507cd5c7e93c4cb009063f32ea3897a35591d7",
       "path": "lib/DotHarness.ClaudeCode.Plugin.dll"
     },
     {
