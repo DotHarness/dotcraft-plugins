@@ -8,28 +8,28 @@
     ".NETCoreApp,Version=v10.0": {
       "DotHarness.ClaudeCode.Plugin/1.0.0": {
         "dependencies": {
-          "DotCraft.Harness": "0.14.2",
+          "DotCraft.Harness": "0.14.4",
           "ModelContextProtocol.AspNetCore": "2.4.0"
         },
         "runtime": {
           "DotHarness.ClaudeCode.Plugin.dll": {}
         }
       },
-      "DotCraft.Core/0.14.2": {
+      "DotCraft.Core/0.14.4": {
         "dependencies": {
           "ModelContextProtocol": "2.4.0",
           "SQLitePCLRaw.bundle_e_sqlite3": "3.0.3",
           "System.Management.Automation": "7.6.6"
         }
       },
-      "DotCraft.Harness/0.14.2": {
+      "DotCraft.Harness/0.14.4": {
         "dependencies": {
-          "DotCraft.Runtime": "0.14.2"
+          "DotCraft.Runtime": "0.14.4"
         }
       },
-      "DotCraft.Runtime/0.14.2": {
+      "DotCraft.Runtime/0.14.4": {
         "dependencies": {
-          "DotCraft.Core": "0.14.2"
+          "DotCraft.Core": "0.14.4"
         }
       },
       "Microsoft.Extensions.AI.Abstractions/10.11.0": {
@@ -490,26 +490,26 @@
       "serviceable": false,
       "sha512": ""
     },
-    "DotCraft.Core/0.14.2": {
+    "DotCraft.Core/0.14.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-0sucPwzuqfeIv7/xfSapo7rZxMIXf5pS2UtgsVby6az986LEhsZfJYSeOXCLfjPPRX1g/oB8i6TmLJ+L/3DgZg==",
-      "path": "dotcraft.core/0.14.2",
-      "hashPath": "dotcraft.core.0.14.2.nupkg.sha512"
+      "sha512": "sha512-1k8l9wbM9SGLobHo5DK8GrACKXsAHiJJzSTjA707sHhkL11HfY+GYBEVMu9yRgCw0m38w2WvxOAbJmFdN/VNxQ==",
+      "path": "dotcraft.core/0.14.4",
+      "hashPath": "dotcraft.core.0.14.4.nupkg.sha512"
     },
-    "DotCraft.Harness/0.14.2": {
+    "DotCraft.Harness/0.14.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-i8EMQAXr9XqwsoT3uL2ClwZHdbGCOXrC2WSCt12m6uInOPKWIhOd1XBDkiTEW0+sajR3HxaEV9YZ318T1Qfdsw==",
-      "path": "dotcraft.harness/0.14.2",
-      "hashPath": "dotcraft.harness.0.14.2.nupkg.sha512"
+      "sha512": "sha512-8ZP8g1uZDJvEOugY/Ovflt7J1/IeSE2Q0ii7l3zahoHiVogn4Jso86lUMw1hx+WUc2se7l+ufpekRY+m9uf42g==",
+      "path": "dotcraft.harness/0.14.4",
+      "hashPath": "dotcraft.harness.0.14.4.nupkg.sha512"
     },
-    "DotCraft.Runtime/0.14.2": {
+    "DotCraft.Runtime/0.14.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-RW/3YUUOBAL7fP9a6ajwfIbJXUdKBt3h8WbL/V2ax7qvYHeGWgWbFROcutz40SnRFztnwoRU/A8YBbiZn7BfyA==",
-      "path": "dotcraft.runtime/0.14.2",
-      "hashPath": "dotcraft.runtime.0.14.2.nupkg.sha512"
+      "sha512": "sha512-lN3guqCHIXeZC4ffkhT+Ewm55ypBplyuyNZEbctyg3EEsi9QUZ0OcUKC35F29fN7q3wZA9m/Fohid/5mKzYlCA==",
+      "path": "dotcraft.runtime/0.14.4",
+      "hashPath": "dotcraft.runtime.0.14.4.nupkg.sha512"
     },
     "Microsoft.Extensions.AI.Abstractions/10.11.0": {
       "type": "package",
