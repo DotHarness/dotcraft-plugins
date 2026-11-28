@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "antigravity",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "displayName": "Antigravity",
   "description": "Use your Google Antigravity account in DotCraft.",
   "capabilities": ["dotnet", "desktop"],
