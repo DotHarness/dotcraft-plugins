@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v10.0": {
       "DotHarness.Antigravity.Plugin/1.0.0": {
         "dependencies": {
-          "DotCraft.Harness": "0.14.3",
+          "DotCraft.Harness": "0.15.0",
+          "DotHarness.Acp": "0.2.0",
           "Microsoft.Data.Sqlite": "10.0.11",
           "ModelContextProtocol.AspNetCore": "2.4.0"
         },
@@ -16,7 +17,7 @@
           "DotHarness.Antigravity.Plugin.dll": {}
         }
       },
-      "DotCraft.Core/0.14.3": {
+      "DotCraft.Core/0.15.0": {
         "dependencies": {
           "Microsoft.Data.Sqlite": "10.0.11",
           "ModelContextProtocol": "2.4.0",
@@ -24,14 +25,23 @@
           "System.Management.Automation": "7.6.6"
         }
       },
-      "DotCraft.Harness/0.14.3": {
+      "DotCraft.Harness/0.15.0": {
         "dependencies": {
-          "DotCraft.Runtime": "0.14.3"
+          "DotCraft.Runtime": "0.15.0"
         }
       },
-      "DotCraft.Runtime/0.14.3": {
+      "DotCraft.Runtime/0.15.0": {
         "dependencies": {
-          "DotCraft.Core": "0.14.3"
+          "DotCraft.Core": "0.15.0"
+        }
+      },
+      "DotHarness.Acp/0.2.0": {
+        "runtime": {
+          "lib/net10.0/DotHarness.Acp.dll": {
+            "assemblyVersion": "0.2.0.0",
+            "fileVersion": "0.2.0.0",
+            "localPath": "DotHarness.Acp.dll"
+          }
         }
       },
       "Microsoft.Data.Sqlite/10.0.11": {
@@ -545,26 +555,33 @@
       "serviceable": false,
       "sha512": ""
     },
-    "DotCraft.Core/0.14.3": {
+    "DotCraft.Core/0.15.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-1rRGDYucCMJlwnVyvdFnMG4TQqHx8eHyzU4s4qWsNnh1ueo5zdb1jTgQoP6T7IXeASrRwIgJkWxygZ8vJLL1iA==",
-      "path": "dotcraft.core/0.14.3",
-      "hashPath": "dotcraft.core.0.14.3.nupkg.sha512"
+      "sha512": "sha512-Fs9jzBEY5S+zKfWoeMQb+cSkLmRUFpAYRek3u/eObTXX0osch7WPSsWsV9SLUTqRB3Tu/+8u9ogAkVXy7mk2Fg==",
+      "path": "dotcraft.core/0.15.0",
+      "hashPath": "dotcraft.core.0.15.0.nupkg.sha512"
     },
-    "DotCraft.Harness/0.14.3": {
+    "DotCraft.Harness/0.15.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-pG4Jfml/HnL6rKooLrJvh2Bq3LFX9Y4cNSlCwATY6jsQg5LDZKB6sjA2hogSBjI21XS2YYZRiUnWoxi5BKi1tw==",
-      "path": "dotcraft.harness/0.14.3",
-      "hashPath": "dotcraft.harness.0.14.3.nupkg.sha512"
+      "sha512": "sha512-vhJKPgMvCY2rmqlUUCWgiXjZ/BTxQIysEZol7iKZoLJNt+PxqaQf8mjtcSOIYj2junJYMg+LVTqvTJqWYJOEeQ==",
+      "path": "dotcraft.harness/0.15.0",
+      "hashPath": "dotcraft.harness.0.15.0.nupkg.sha512"
     },
-    "DotCraft.Runtime/0.14.3": {
+    "DotCraft.Runtime/0.15.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-HGzP+hwJZ/SDBYOd/gnwWm1Vdk8QZYDDqp704BaJTmB742ak1wTT491rCu6dngtprHsj9PJJ34FEU06NbLFSUA==",
-      "path": "dotcraft.runtime/0.14.3",
-      "hashPath": "dotcraft.runtime.0.14.3.nupkg.sha512"
+      "sha512": "sha512-tqWQrdQTXWQVFJlN7dyc5HWBqWnxgQKRkxl/N34D41/FBqjHs3KzVVzZeA6dr/SBLtwr9YejNLJM2xq6cFqeLA==",
+      "path": "dotcraft.runtime/0.15.0",
+      "hashPath": "dotcraft.runtime.0.15.0.nupkg.sha512"
+    },
+    "DotHarness.Acp/0.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nJP7hbY+YSOCvr9FcJI0R0Hqud9QjoEFYvcYekn6YtlmNlQXVlj0iIjb73iM9kuHlHzOGgdtyT8aW4COalZ8Bw==",
+      "path": "dotharness.acp/0.2.0",
+      "hashPath": "dotharness.acp.0.2.0.nupkg.sha512"
     },
     "Microsoft.Data.Sqlite/10.0.11": {
       "type": "package",
